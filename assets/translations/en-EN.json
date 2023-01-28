@@ -1,0 +1,137 @@
+{
+    "home_screen": {
+        "see_all": "See all",
+        "top_doctor": "Top Doctor",
+        "recomended_doctor": "Recomended Doctor",
+        "specialist_doctor": "Specialist Doctor",
+        "favorite_doctor": "Favorite Doctor",
+        "notifications": "Notifications"
+    },
+    "doctor_details_screen": {
+        "share": "Share",
+        "about_doctor": "About Doctor",
+        "working_time": "Working Time",
+        "see_reviews": "See reviews",
+        "make_appointment": "Make Appointment",
+        "reviews": "Reviews"
+    },
+    "book_appointment_screen": {
+        "morning": "Morning",
+        "evening": "Evening",
+        "free_information": "Free Information",
+        "choose_the_hour": "Choose the Hour",
+        "can_messaging_with_doctor": "Can messaging with doctor",
+        "can_make_a_voice_call_with_doctor": "Can make a voice call with doctor"
+    },
+    "patient_details_screen": {
+        "your_appointment_booking_successfully _\n_completed._Dr._Jenny_Wilson_will_\n_Message you soon.": "Your appointment booking successfully\ncompleted. Dr. Jenny Wilson will\nMessage you soon.",
+        "successfull": "Successfull",
+        "male": "Male",
+        "female": "Female",
+        "phone_number": "Phone Number",
+        "gender": "Gender",
+        "patient_details": "Patient Details",
+        "write_your_problem": "Write Your Problem",
+        "full_name": "Full Name",
+        "select_your_age_range": "Select Your Age Range"
+    },
+    "appointment_screen": {
+        "my_appointments": "My Appointments",
+        "upcoming": "Upcoming",
+        "past": "Past",
+        "you_don`t_have_an_appointment": "You don`t have an appointment"
+    },
+    "my_appointments_detail_screen": {
+        "free_information": "Free Information",
+        "visit_time": "Visit Time",
+        "patient_information": "Patient Information"
+    },
+    "history_screen": {
+        "messaging": "Messaging",
+        "voice_call": "Voice Call",
+        "history": "History"
+    },
+    "profile_screen": {
+        "profile": "Profile",
+        "notification": "Notification",
+        "security": "Security",
+        "appearance": "Appearance",
+        "help": "Help",
+        "language": "Language",
+        "logout": "Logout"
+    },
+    "custom_switch": {
+        "sound": "Sound",
+        "touch_id": "Touch ID",
+        "full_screen_mode": "Full Screen Mode",
+        "dark_mode": "Dark Mode",
+        "face_id": "Face ID",
+        "remember_me": "Remember me",
+        "vibrate": "Vibrate",
+        "new_tips_available": "New tips available",
+        "new_service_available": "New service available"
+    },
+    "language_screen": {
+        "english": "English",
+        "russian": "Russian",
+        "uzbek": "Uzbek"
+    },
+    "help_screen": {
+        "faq": "FAQ",
+        "terms_and_condition": "Terms and Condition",
+        "contact_us": "Contact us",
+        "terms_&_conditions": "Terms & Conditions",
+        "privay_policy": "Privay Policy"
+    },
+    "contact_us": {
+        "full_name": "Full Name",
+        "email": "Email",
+        "message": "Message",
+        "send_message": "Send Message"
+    },
+    "faq_screen": {
+        "general": "General",
+        "how_to_use_DoctorQ?": "How to use DoctorQ?",
+        "is_DoctorQ_is_safe_for_me?'": "'Is DoctorQ is safe for me?'",
+        "how_to_schedule_consultation_DoctorQ?'": "'How to schedule consultation DoctorQ?'",
+        "how_to_logout_from_DoctorQ?'": " 'How to logout from DoctorQ?'",
+        "is_there_a_free_tips_to_get_health_this_app'": "'Is there a free tips to get health this app'",
+        "login": "Login",
+        "account": "Account",
+        "doctor": "Doctor",
+        "tips": "Tips",
+        "what_is_DoctorQ?": "What is DoctorQ?",
+        "doctorQ_is_greatest_medical_online_consultation_app_platform_in_this_century.": "DoctorQ is greatest medical online consultation app platform in this century.",
+        "is_DoctorQ_free_to_use?": "Is DoctorQ free to use?"
+    },
+    "for_logout": {
+        "are_you_sure_want_to_logout?": "Are you sure want to logout?",
+        "yes,_logout": "Yes, Logout",
+        "cancel": "Cancel"
+    },
+    "global": {
+        "search": "Search",
+        "ok": "OK",
+        "book_appointment": "Book Appointment",
+        "next": "Next"
+    },
+    "doctor_stats": {
+        "reviews": "Reviews",
+        "years_experiences": "Years experiences",
+        "patients": "Patients"
+    },
+    "others": {
+        "doctors": "Doctors",
+        "appointment_alarm": "Appointment Alarm",
+        "your_appointment_will_be_start_after_15\nminutes._stay_with_app_and_take_care.": "Your appointment will be start after 15\nminutes. Stay with app and take care.",
+        "appointment_confirmed": "Appointment Confirmed",
+        "appointment_confirmed_Dr._Jerome_Bell.\nCall_will_be_held_at_11:00_AM_|_26_Mar_22": "Appointment confirmed Dr. Jerome Bell.\nCall will be held at 11:00 AM | 26 Mar 22",
+        "new_features_available": "New Features Available",
+        "now_you_can_mirror_video_while_on\nvideo_call": "Now you can mirror video while on\nvideo call",
+        "home": "Home",
+        "appointment": "Appointment",
+        "back": "Back",
+        "all": "All",
+        "profile": "profile"
+    }
+}

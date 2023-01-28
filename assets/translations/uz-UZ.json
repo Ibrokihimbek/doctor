@@ -1,0 +1,140 @@
+{
+    "home_screen": {
+        "see_all": "Hammasini ko'rish",
+        "top_doctor": "Eng yaxshi shifokorlar",
+        "recomended_doctor": "Tavsiya etilgan shifokor",
+        "specialist_doctor": "Tibbiyot mutaxassisi",
+        "favorite_doctor": "Sevimli Shifokor",
+        "notifications": "Bildirishnomalar"
+    },
+    "doctor_detail_screen": {
+        "share": "Ulashish",
+        "about_doctor": "Shifokor haqida",
+        "working_time": "Ish vaqti",
+        "see_reviews": "Sharhlarni ko'rish",
+        "make_appointment": "Uchrashuv belgilash",
+        "reviews": "Sharhlar"
+    },
+    "book_appointment_screen": {
+        "morning": "Ertalabgi",
+        "evening": "Kechgi",
+        "free_information": "Bepul ma'lumot",
+        "choose_the_hour": "Vaqtni tanlang",
+        "can_messaging_with_doctor": "Shifokor bilan xabarlashish mumkin",
+        "can_make_a_voice_call_with_doctor": "Shifokor bilan ovozli qo'ng'iroq qilish mumkin"
+    },
+    "patient_details_screen": {
+        "your_appointment_booking_successfully _\n_completed._Dr._Jenny_Wilson_will_\n_Message you soon.": "Uchrashuvni band qilish muvaffaqiyatli\nyakunlandi. Doktor Jenni Uilson\nTez orada sizga xabar yuboradi.c",
+        "successfull": "Successfull",
+        "male": "Male",
+        "female": "Female",
+        "phone_number": "Phone Number",
+        "gender": "Gender",
+        "patient_details": "Bemor tafsilotlari",
+        "write_your_problem": "Muammoingizni yozing",
+        "select_your_age_range": "Yosh chegarangizni tanlang",
+        "full_name": "FISH"
+    },
+    "appointment_screen": {
+        "you_don`t_have_an_appointment": "Sizda uchrashuv yo'q",
+        "my_appointments": "Mening uchrashuvlarim",
+        "upcoming": "Kelgusi",
+        "past": "O'tgan"
+    },
+    "my_appointments_detail_screen": {
+        "free_information": "Bepul ma'lumot",
+        "visit_time": "Tashrif vaqti",
+        "patient_information": "Bemor haqida ma'lumot"
+    },
+    "history_screen": {
+        "messaging": "Xabarlar",
+        "voice_call": "Ovozli qo'ng'iroq",
+        "history": "Tarix"
+    },
+    "profile_screen": {
+        "profile": "Profil",
+        "notification": "Bildirishnoma",
+        "security": "Xavfsizlik",
+        "appearance": "Ko'rinish",
+        "language": "Til",
+        "help": "Yordam",
+        "logout": "Chiqish"
+    },
+    "custom_switch": {
+        "sound": "Ovoz",
+        "touch_id": "Touch ID",
+        "vibrate": "Tebranish",
+        "face_id": "Face ID",
+        "full_screen_mode": "To'liq ekran rejimi",
+        "dark_mode": "Tunggi rejim",
+        "remember_me": "Meni eslab qol",
+        "new_tips_available": "Yangi maslahatlar mavjud",
+        "new_service_available": "Yangi xizmat mavjud"
+    },
+    "language_screen": {
+        "english": "Inglizcha",
+        "russian": "Ruscha",
+        "uzbek": "O'zbekcha"
+    },
+    "help_screen": {
+        "faq": "FAQ",
+        "contact_us": "Biz bilan bog'lanish",
+        "terms_&_conditions": "Foydalanish shartlari",
+        "privay_policy": "Maxfiylik",
+        "terms_and_condition": "Foydalanish shartlari"
+    },
+    "contact_us": {
+        "full_name": "FISH",
+        "email": "Elektron pochta",
+        "message": "Xabar",
+        "send_message": "Xabar yuborish"
+    },
+    "faq_screen": {
+        "general": "Umumiy",
+        "login": "Tizimga kirish",
+        "account": "Akkaunt",
+        "doctor": "Shifokor",
+        "tips": "Maslahatlar",
+        "terms_and_condition": "Foydalanish shartlari",
+        "doctorQ_is_greatest_medical_online_consultation_app_platform_in_this_century.": "DoctorQ - bu davrdagi eng katta tibbiy onlayn maslahat platformasi.",
+        "what_is_DoctorQ?": "DoctorQ nima?",
+        "how_to_use_DoctorQ?": "DoctorQ dan qanday foydalanish kerak?",
+        "is_DoctorQ_is_safe_for_me?'": "DoctorQ men uchun xavfsizmi?",
+        "how_to_schedule_consultation_DoctorQ?'": "DoctorQ maslahatni qanday rejalashtirish kerak?",
+        "how_to_logout_from_DoctorQ?'": "DoctorQ dan qanday chiqish mumkin?",
+        "is_there_a_free_tips_to_get_health_this_app'": "Ushbu ilovada salomatlik uchun bepul maslahatlar bormi?",
+        "is_DoctorQ_free_to_use?": "DoctorQ dan foydalanish bepulmi?"
+    },
+    "for_logout": {
+        "are_you_sure_want_to_logout?": "Haqiqatan ham tizimdan chiqmoqchimisiz?",
+        "yes,_logout": "Ha, chiqish",
+        "cancel": "Bekor qilish"
+    },
+    "global": {
+        "book_appointment": "Uchrashuv buyurtma qilish",
+        "search": "Qidiruv",
+        "next": "Keyingi",
+        "full_name": "FISH",
+        "ok": "Yaxshi"
+    },
+    "doctor_stats": {
+        "reviews": "Sharhlar",
+        "years_experiences": "Yillik tajribalari",
+        "patients": "Bemorlar"
+    },
+    "others": {
+        "doctors": "Shifokorlar",
+        "patient_information": "Bemor haqida ma'lumot",
+        "appointment_alarm": "Uchrashuv signali",
+        "your_appointment_will_be_start_after_15\nminutes._stay_with_app_and_take_care.": "Uchrashuvingiz 15 daqiqadan keyin boshlanadi. \nIlova bilan qoling va ehtiyot bo'ling.",
+        "appointment_confirmed": "Uchrashuv tasdiqlandi",
+        "appointment_confirmed_Dr._Jerome_Bell.\nCall_will_be_held_at_11:00_AM_|_26_Mar_22": "Shifokor Jerom Bell bilan uchrashuv tasdiqlandi.\nQo'ng'iroq 2022-yil 26-mart soat 11:00 da \nbo'lib o'tadi",
+        "new_features_available": "Yangi funksiyalar mavjud",
+        "now_you_can_mirror_video_while_on\nvideo_call": "Endi sizvideo qo'ng'iroq paytida videoni aks \nettirishingiz mumkin",
+        "home": "Asosiy",
+        "appointment": "Uchrashuv",
+        "back": "Orqaga",
+        "all": "Hammasi"
+    }
+   
+}

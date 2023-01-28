@@ -1,0 +1,138 @@
+{
+    "home_screen": {
+        "see_all": "Увидеть все",
+        "top_doctor": "Лучший доктор",
+        "recomended_doctor": "Рекомендуемый врач",
+        "specialist_doctor": "Врач-специалист",
+        "notifications": "Уведомления",
+        "favorite_doctor": "Любимый доктор"
+    },
+    "doctor_detail_screen": {
+        "share": "Делиться",
+        "about_doctor": "О докторе",
+        "working_time": "Рабочее время",
+        "see_reviews": "Посмотреть отзывы",
+        "make_appointment": "Назначить встречу",
+        "reviews": "Отзывы"
+    },
+    "book_appointment_screen": {
+        "morning": "Утром",
+        "evening": "Вечером",
+        "choose_the_hour": "Выберите час",
+        "next": "Следующий",
+        "can_messaging_with_doctor": "Можно ли переписываться с врачом",
+        "can_make_a_voice_call_with_doctor": "Можно сделать голосовой вызов с врачом"
+    },
+    "patient_details_screen": {
+        "your_appointment_booking_successfully _\n_completed._Dr._Jenny_Wilson_will_\n_Message you soon.": "Your appointment booking successfully\ncompleted. Dr. Jenny Wilson will\nMessage you soon.",
+        "successfull": "Successfull",
+        "male": "Male",
+        "female": "Female",
+        "phone_number": "Phone Number",
+        "full_name": "Full Name",
+        "gender": "Gender",
+        "patient_details": "Сведения о пациенте",
+        "write_your_problem": "Напишите свою проблему",
+        "select_your_age_range": "Выберите свой возрастной диапазон"
+    },
+    "appointment_screen": {
+        "my_appointments": "Мои встречи",
+        "upcoming": "Предстоящие",
+        "you_don`t_have_an_appointment": "У вас нет записи",
+        "past": "Прошлый"
+    },
+    "my_appointments_detail_screen": {
+        "patient_information": "Информация о пациенте",
+        "free_information": "Бесплатная информация",
+        "visit_time": "Время посещения"
+    },
+    "history_screen": {
+        "messaging": "Сообщение",
+        "voice_call": "Голосовой вызов",
+        "history": "История"
+    },
+    "profile_screen": {
+        "notification": "Уведомление",
+        "security": "Безопасность",
+        "appearance": "Внешность",
+        "help": "Помощь",
+        "profile": "Профиль",
+        "language": "Язык",
+        "logout": "Выйти"
+    },
+    "custom_switch": {
+        "sound": "Звук",
+        "touch_id": "Touch ID",
+        "vibrate": "Вибрировать",
+        "full_screen_mode": "Full Screen Mode",
+        "dark_mode": "Dark Mode",
+        "face_id": "Face ID",
+        "remember_me": "Remember me",
+        "new_tips_available": "Доступна новые подсказки",
+        "new_service_available": "Доступна новая услуга"
+    },
+    "language_screen": {
+        "english": "Английский",
+        "russian": "Русский",
+        "uzbek": "Узбекский"
+    },
+    "help_screen": {
+        "faq": "FAQ",
+        "contact_us": "Свяжитесь с нами",
+        "terms_&_conditions": "Условия и положения",
+        "privay_policy": "Политика конфиденциальности",
+        "terms_and_condition": "Сроки и условия"
+    },
+    "contact_us": {
+        "full_name": "ФИО",
+        "email": "Эл. адрес",
+        "message": "Сообщение",
+        "send_message": "Отправить сообщение"
+    },
+    "faq_screen": {
+        "general": "Общий",
+        "login": "Авторизоваться",
+        "account": "Аккаунт",
+        "doctor": "Врач",
+        "tips": "Советы",
+        "doctorQ_is_greatest_medical_online_consultation_app_platform_in_this_century.": "DoctorQ — лучшая платформа для медицинских онлайн-консультаций в этом столетии.",
+        "what_is_DoctorQ?": "Что такое DoctorQ?",
+        "how_to_use_DoctorQ?": "Как пользоваться DoctorQ?",
+        "is_DoctorQ_is_safe_for_me?'": "Безопасен ли для меня DoctorQ?",
+        "how_to_schedule_consultation_DoctorQ?'": "Как записаться на консультацию DoctorQ?",
+        "how_to_logout_from_DoctorQ?'": "Как выйти из DoctorQ?",
+        "is_there_a_free_tips_to_get_health_this_app'": "Есть ли бесплатные советы, чтобы получить здоровье это приложение?",
+        "is_DoctorQ_free_to_use?": "Можно ли использовать DoctorQ бесплатно?"
+    },
+    "for_logout": {
+        "are_you_sure_want_to_logout?": "Вы уверены, что хотите выйти?",
+        "yes,_logout": "Да, выйти",
+        "cancel": "Отмена"
+    },
+    "global": {
+        "full_name": "ФИО",
+        "search": "Поиск",
+        "ok": "Хорошо",
+        "book_appointment": "Заказать на прием",
+        "next": "СледующПродолжитьий"
+    },
+    "doctor_stats": {
+        "reviews": "Отзывы",
+        "years_experiences": "Многолетний опыт",
+        "patients": "Пациенты"
+    },
+    "others": {
+        "doctors": "Врачи",
+        "appointment_alarm": "Будильник о встрече",
+        "your_appointment_will_be_start_after_15\nminutes._stay_with_app_and_take_care.": "Ваша встреча начнется через 15 минут. \nОставайтесь с приложением и берегите себя.",
+        "appointment_confirmed": "Назначение подтверждено",
+        "appointment_confirmed_Dr._Jerome_Bell.\nCall_will_be_held_at_11:00_AM_|_26_Mar_22": "Назначение подтвердил доктор Джером Белл. \nЗвонок состоится в 11:00 | 26 мар 22",
+        "new_features_available": "Доступны новые функции",
+        "now_you_can_mirror_video_while_on\nvideo_call": "Теперь вы можете отразить видео во время\nвидеозвонка.",
+        "home": "Главный",
+        "appointment": "Встреча",
+        "back": "Назад",
+        "all": "Все"
+    }
+   
+}
