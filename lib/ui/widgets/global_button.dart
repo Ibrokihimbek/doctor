@@ -23,11 +23,11 @@ class GlobalButton extends StatelessWidget {
       width: double.infinity,
       height: isSmall ? 43.h : 55.h,
       decoration: BoxDecoration(
-        color: isActive ? null : MyColors.actionPrimaryDisabled,
+        color: isActive ? null : Colors.blue.withOpacity(0.4),
         gradient: isActive
             ? const LinearGradient(colors: MyColors.otherGradient1)
             : null,
-        borderRadius: BorderRadius.circular(32.r),
+        borderRadius: BorderRadius.circular(30.r),
       ),
       child: ElevatedButton(
         onPressed: isActive ? onTap : null,
@@ -35,14 +35,15 @@ class GlobalButton extends StatelessWidget {
           backgroundColor: MyColors.primary,
           // shadowColor: Colors.transparent,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(32.r),
+            borderRadius: BorderRadius.circular(30.r),
           ),
         ),
         child: Text(
           tr('global.$buttonText'),
           style: MyTextStyle.sfProSemiBold.copyWith(
-            fontSize: 18.sp,
+            fontSize: 16.sp,
             color: Colors.white,
+            fontWeight: FontWeight.w500
           ),
         ),
       ),

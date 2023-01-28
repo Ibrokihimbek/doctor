@@ -52,4 +52,5 @@ class ActionIcons {
   static const translate = "assets/svg/action/translate.svg";
   static const visibility = "assets/svg/action/visibility.svg";
   static const visibilityOff = "assets/svg/action/visibility_off.svg";
+  static const meeting = "assets/svg/action/meeting.svg";
 }

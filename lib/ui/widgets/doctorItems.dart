@@ -26,40 +26,36 @@ class DoctorItems extends StatelessWidget {
       padding: EdgeInsets.all(16.w),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20.r),
-          border: Border.all(width: 1.w, color: MyColors.actionPrimaryDefault),
+          // border: Border.all(width: 1.w, color: MyColors.actionPrimaryDefault),
           color: MyColors.white),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
             children: [
-              Container(
-                padding: const EdgeInsets.all(9).h.w.r,
-                height: 44.h,
-                width: 44.w,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: MyColors.primary.withOpacity(0.1),
-                ),
-                child: SvgPicture.asset(
-                  SocialIcons.group,
-                  color: MyColors.primary,
-                ),
-              ),
               SizedBox(height: 10.h),
-              Text(
-                patients,
-                style: MyTextStyle.sfProMedium.copyWith(
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w600,
-                  color: MyColors.primary,
+              Container(
+                height: 80.h,
+                width: 80.w,
+                decoration: BoxDecoration( shape: BoxShape.circle,
+                    color: Color(0xff93d1fe).withOpacity(0.2)
+                ),
+                child: Center(
+                  child: Text(
+                    patients,
+                    style: MyTextStyle.sfProMedium.copyWith(
+                      fontSize: 24.sp,
+                      fontWeight: FontWeight.w600,
+                      color: MyColors.primary,
+                    ),
+                  ),
                 ),
               ),
-              SizedBox(height: 2.h),
+              SizedBox(height: 12.h),
               Text(
                 "patients".tr(),
                 style: MyTextStyle.sfProMedium.copyWith(
-                  fontSize: 14.sp,
+                  fontSize: 16.sp,
                   fontWeight: FontWeight.w400,
                   color: MyColors.neutralBlack,
                 ),
@@ -68,33 +64,29 @@ class DoctorItems extends StatelessWidget {
           ),
           Column(
             children: [
+              SizedBox(height: 10.h),
               Container(
-                padding: const EdgeInsets.all(9).h.r.w,
-                height: 44.h,
-                width: 44.w,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: MyColors.primary.withOpacity(0.1),
+                height: 80.h,
+                width: 80.w,
+                decoration: BoxDecoration( shape: BoxShape.circle,
+                    color: Color(0xff93d1fe).withOpacity(0.2)
                 ),
-                child: SvgPicture.asset(
-                  SocialIcons.person,
-                  color: MyColors.primary,
+                child: Center(
+                  child: Text(
+                    yearsExperiences,
+                    style: MyTextStyle.sfProMedium.copyWith(
+                      fontSize: 24.sp,
+                      fontWeight: FontWeight.w600,
+                      color: MyColors.primary,
+                    ),
+                  ),
                 ),
               ),
-              SizedBox(height: 10.h),
+              SizedBox(height: 12.h),
               Text(
-                yearsExperiences,
+                "experiences".tr(),
                 style: MyTextStyle.sfProMedium.copyWith(
                   fontSize: 16.sp,
-                  fontWeight: FontWeight.w600,
-                  color: MyColors.primary,
-                ),
-              ),
-              SizedBox(height: 2.h),
-              Text(
-                "years_experiences".tr(),
-                style: MyTextStyle.sfProMedium.copyWith(
-                  fontSize: 14.sp,
                   fontWeight: FontWeight.w400,
                   color: MyColors.neutralBlack,
                 ),
@@ -103,33 +95,29 @@ class DoctorItems extends StatelessWidget {
           ),
           Column(
             children: [
-              Container(
-                padding: const EdgeInsets.all(9).h.w.r,
-                height: 44.h,
-                width: 44.w,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: MyColors.primary.withOpacity(0.1),
-                ),
-                child: SvgPicture.asset(
-                  EditorIcons.insertComment,
-                  color: MyColors.primary,
-                ),
-              ),
               SizedBox(height: 10.h),
-              Text(
-                reviews,
-                style: MyTextStyle.sfProMedium.copyWith(
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w600,
-                  color: MyColors.primary,
+              Container(
+                height: 80.h,
+                width: 80.w,
+                decoration: BoxDecoration( shape: BoxShape.circle,
+                    color: Color(0xff93d1fe).withOpacity(0.2)
+                ),
+                child: Center(
+                  child: Text(
+                    reviews,
+                    style: MyTextStyle.sfProMedium.copyWith(
+                      fontSize: 24.sp,
+                      fontWeight: FontWeight.w600,
+                      color: MyColors.primary,
+                    ),
+                  ),
                 ),
               ),
-              SizedBox(height: 2.h),
+              SizedBox(height: 12.h),
               Text(
                 "reviews".tr(),
                 style: MyTextStyle.sfProMedium.copyWith(
-                  fontSize: 14.sp,
+                  fontSize: 16.sp,
                   fontWeight: FontWeight.w400,
                   color: MyColors.neutralBlack,
                 ),

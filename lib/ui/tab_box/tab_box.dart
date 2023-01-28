@@ -32,9 +32,9 @@ class _TabBoxState extends State<TabBox> {
   @override
   void initState() {
     screens = [
-      HomeScreen(),
-      AppointmentScreen(),
-      HistoryPage(),
+      const HomeScreen(),
+      const AppointmentScreen(),
+      const HistoryPage(),
       ProfileScreen()
     ];
     super.initState();
@@ -49,87 +49,39 @@ class _TabBoxState extends State<TabBox> {
     return Scaffold(
       key: _key,
       resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       //drawer: const CustomDrawer(),
       body: BlocBuilder<TabCubit, TabsState>(
         builder: (cubit, state) {
-          return Stack(
-            children: [
-              IndexedStack(
-                index: state.currentPage,
-                children: screens,
-              ),
-              Positioned(
-                left: 0,
-                right: 0,
-                bottom: 0,
-                child: BottomNavyBar(
-                  bottomNavHeight: 70.h,
-                  selectedIndex: state.currentPage,
-                  showElevation: true,
-                  curve: Curves.easeIn,
-                  onItemSelected: (index) => setState(
-                      () => context.read<TabCubit>().changeTabState(index)),
-                  items: <BottomNavyBarItem>[
-                    BottomNavyBarItem(
-                      icon: SvgPicture.asset(
-                        ActionIcons.home,
-                        color: MyColors.primary,
-                        height: 24.h,
-                      ),
-                      title:  Text(tr('others.home')),
-                      activeColor: MyColors.primary,
-                      textAlign: TextAlign.center,
-                    ),
-                    BottomNavyBarItem(
-                      icon: SvgPicture.asset(
-                        NotificationIcons.eventNote,
-                        color: MyColors.primary,
-                        height: 24.h,
-                      ),
-                      title:  Text(tr('others.appointment')),
-                      activeColor: MyColors.primary,
-                      textAlign: TextAlign.center,
-                    ),
-                    BottomNavyBarItem(
-                      icon: SvgPicture.asset(
-                        EditorIcons.formatLineSpacing,
-                        color: MyColors.primary,
-                        height: 24.h,
-                      ),
-                      title:  Text(
-                        tr("history_screen.history"),
-                      ),
-                      activeColor: MyColors.primary,
-                      textAlign: TextAlign.center,
-                    ),
-                    BottomNavyBarItem(
-                      icon: SvgPicture.asset(
-                        SocialIcons.person,
-                        color: MyColors.primary,
-                        height: 24.h,
-                      ),
-                      title:  Text(tr('profile_screen.profile')),
-                      activeColor: MyColors.primary,
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                ),
-              ),
-              BlocListener<ConnectivityCubit, ConnectivityState>(
-                listener: (context, state) {
-                  if (state.connectivityResult == ConnectivityResult.none) {
-                    Navigator.pushNamed(
-                      context,
-                      noInternetRoute,
-                      arguments: _init,
-                    );
-                  }
-                },
-                child: const SizedBox(),
-              )
-            ],
+          return Scaffold(
+            body:  screens[state.currentPage],
+            bottomNavigationBar: BottomNavigationBar(
+                currentIndex: state.currentPage,
+                selectedItemColor: const Color(0xff2972FE),
+                unselectedItemColor: Colors.grey.withOpacity(0.6),
+                onTap: (value)=>context.read<TabCubit>().changeTabState(value),
+                selectedLabelStyle: const TextStyle(color: Colors.grey),
+                unselectedLabelStyle: const TextStyle(color: Colors.grey),
+                items:  [
+                  const BottomNavigationBarItem(
+                      icon: Icon(Icons.home,size: 34,),
+                      label: 'Asosiy',
+                  ),
+                  BottomNavigationBarItem(
+                      icon: SvgPicture.asset(ActionIcons.meeting,width: 30,height: 30,color: state.currentPage==1?Color(0xff2972FE):Colors.grey,),
+                      label: 'Uchrashuv'
+                  ),
+                  const BottomNavigationBarItem(
+                      icon: Icon(Icons.info,size: 34,),
+                      label: "Ma'lumot"
+                  ),
+                  const BottomNavigationBarItem(
+                      icon: Icon(Icons.person,size: 34,),
+                      label: "Profil"
+                  ),
+                ]),
           );
+
         },
       ),
     );

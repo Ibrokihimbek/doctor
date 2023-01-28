@@ -35,8 +35,8 @@ class _SignInOrSignUpScreenState extends State<SignInOrSignUpScreen> {
             Padding(
               padding: const EdgeInsets.only(top: 90, left: 24, right: 24).r,
               child: Text(
-                "Welcome to DoctorQ!",
-                style: TextStyle(fontSize: 26.sp, fontWeight: FontWeight.w600),
+                "Xush Kelibsiz",
+                style: TextStyle(fontSize: 26.sp, fontWeight: FontWeight.w500,fontStyle: FontStyle.normal),
               ),
             ),
             Padding(
@@ -58,25 +58,27 @@ class _SignInOrSignUpScreenState extends State<SignInOrSignUpScreen> {
                         end: Alignment.bottomLeft,
                         colors: [
                           Color(0xFF2972FE),
-                          Color(0xFF6499FF),
+                          Color(0xFF0372FE),
+                          // Color(0xFF6499FF),
                         ],
                       ),
-                      borderRadius: BorderRadius.circular(32).r,
+                      borderRadius: BorderRadius.circular(12).r,
                     ),
                     child: Center(
                         child: Text(
-                      "Sign Up",
+                      "Ro'yxatdan o'tish",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 18.sp,
-                          fontWeight: FontWeight.w600),
+                          fontWeight: FontWeight.w500),
                     ))),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 16, right: 15, left: 15).r,
               child: GlobalButtonOutline(
-                buttonText: 'Sign In',
+
+                buttonText: 'Kirish',
                 onTap: () {
                   Navigator.pushNamedAndRemoveUntil(
                       context, loginPage, (route) => false);

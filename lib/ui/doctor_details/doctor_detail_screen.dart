@@ -154,13 +154,12 @@ class _DoctorDetailScreenState extends State<DoctorDetailScreen> {
                         cardioSpecialist: widget.doctorModel.specialityName,
                         rating: widget.doctorModel.rating,
                       ),
-                      SizedBox(height: 24.h),
                       DoctorItems(
                         patients: "${widget.doctorModel.patientCount}+",
                         yearsExperiences: "${widget.doctorModel.experience}+",
                         reviews: "${checkReviews(reviews.length)}+",
                       ),
-                      SizedBox(height: 24.h),
+                      // SizedBox(height: 24.h),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 24).w,
                         child: Column(
@@ -202,10 +201,7 @@ class _DoctorDetailScreenState extends State<DoctorDetailScreen> {
                                       arguments: {"reviews": reviews},
                                     );
                                   },
-                                  child: const CustomTextBold(
-                                    text: "see_reviews",
-                                    color: MyColors.actionPrimaryDefault,
-                                  ),
+                                  child: Text('See reviews',style: TextStyle(fontWeight: FontWeight.w500,fontSize: 18.sp,color: Color(0xff1f1ffe).withOpacity(0.5)),)
                                 ),
                               ],
                             ),
@@ -216,10 +212,10 @@ class _DoctorDetailScreenState extends State<DoctorDetailScreen> {
                         ),
                       ),
                       SizedBox(
-                        height: 88.h,
+                        height: 110.h,
                         child: ListView.builder(
                           itemCount: 7,
-                          padding: const EdgeInsets.only(left: 24, right: 12).r,
+                          padding: const EdgeInsets.only(left: 24, right: 12,top: 4,bottom: 4).r,
                           scrollDirection: Axis.horizontal,
                           physics: const BouncingScrollPhysics(),
                           itemBuilder: (context, index) {

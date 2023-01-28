@@ -41,29 +41,29 @@ class SignInPage extends StatelessWidget {
                     height: m_h(context)*0.022,
                   ),
                    Text(
-                    "Sign in to your account",
+                    "Hisobingizga kiring",
                     style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w500),
                   ),
-                  CustomTextField(controller: emailController,hintText: "Email",),
-                  CustomTextField(controller: passwordController,hintText: "Password",),
+                  CustomTextField(controller: emailController,hintText: "Elektron pochta",),
+                  CustomTextField(controller: passwordController,hintText: "Parol",),
                   SizedBox(
                     height: m_h(context)*0.022,
                   ),
-                  AuthButton(title: "Sign In",password: passwordController.text,email: emailController.text),
+                  AuthButton(title: "Kirish",password: passwordController.text,email: emailController.text),
                    SizedBox(
                     height: m_h(context)*0.003,
                   ),
                    SizedBox(
                     height: m_h(context)*0.03,
                   ),
-                   Text("or continue with",style: TextStyle(color: Colors.black,fontSize: 18.sp,fontWeight: FontWeight.w500),),
+                   Text("yoki davom eting",style: TextStyle(color: Colors.black,fontSize: 18.sp,fontWeight: FontWeight.w500),),
                    SizedBox(
                     height: m_h(context)*0.05,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      AuthWithButton(title: "Facebook", image: AppIcons.facebook,isCreate: false),
+
                       AuthWithButton(title: "Google", image: AppIcons.google,isCreate: false),
                     ],
                   ),
@@ -73,12 +73,12 @@ class SignInPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                       Text("Don't have an account? ",style: TextStyle(color: Colors.grey,fontSize: 18.sp),),
+                       Text("Hisobingiz yo'qmi? ",style: TextStyle(color: Colors.grey,fontSize: 18.sp),),
                       InkWell(
                           onTap: (){
                             Navigator.pushReplacementNamed(context, signUpPage);
                           },
-                          child:  Text("Sign Up",style: TextStyle(color: MyColors.primary,fontWeight: FontWeight.bold,fontSize: 18.sp),))
+                          child:  Text("Ro'yxatdan o'tish",style: TextStyle(color: MyColors.primary,fontWeight: FontWeight.bold,fontSize: 18.sp),))
                     ],
                   ),
                 ],

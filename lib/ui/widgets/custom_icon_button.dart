@@ -23,8 +23,8 @@ class CustomIconButton extends StatelessWidget {
         onPressed: onTap,
         style: ElevatedButton.styleFrom(
           padding: EdgeInsets.zero,
-          backgroundColor: MyColors.primary.withOpacity(0.1),
-          shadowColor: MyColors.primary.withOpacity(0.1),
+          backgroundColor: Colors.white,
+          shadowColor: Color(0xff121212).withOpacity(0.3),
           surfaceTintColor: Colors.white,
           elevation: 4,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),

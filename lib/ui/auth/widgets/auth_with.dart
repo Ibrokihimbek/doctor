@@ -29,15 +29,16 @@ class AuthWithButton extends StatelessWidget {
       },
       child: Container(
         height: m_h(context)*0.064,
-        width: m_h(context)*0.18,
+        width: m_h(context)*0.41,
         decoration: BoxDecoration(
             border: Border.all(color: MyColors.neutral1.withOpacity(0.07)),
             borderRadius: BorderRadius.circular(m_h(context)*0.016)
         ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(image,width: m_h(context)*0.03,),
+             SizedBox(width: 10.w,),
              Text(title,style:   TextStyle(color: MyColors.neutralBlack,fontWeight: FontWeight.w600,fontSize: 18.sp),)
           ],
         ),

@@ -7,6 +7,7 @@ import 'package:doctor_app/ui/my_appointment_detail/my_appointment_detail_screen
 import 'package:doctor_app/ui/no_internet/no_internet_screen.dart';
 import 'package:doctor_app/ui/on_boarding/signin_or_signup_page.dart';
 import 'package:doctor_app/ui/reviews/reviews_screen.dart';
+import 'package:doctor_app/ui/specialist_deatil_doctor/specialist_detail_screen.dart';
 import 'package:doctor_app/ui/splash/splash_screen.dart';
 import 'package:doctor_app/ui/tab_box/history/history_screen.dart';
 import 'package:doctor_app/ui/tab_box/profile/profile_screen.dart';
@@ -39,8 +40,9 @@ class MyRouter {
     switch (settings.name) {
       case onBoarding:
         return navigateTo(OnBoardingScreen());
-      // case mainPage:
-      //   return navigateTo(MainPage());
+      case specialDoctor:
+        final args = settings.arguments as Map<String, dynamic>;
+        return navigateTo(SpecialistDetailScreen(specialistId: args['specialistId'],specialName: args ['specialName'],));
       case noInternetRoute:
         return navigateTo(
             NoInternetScreen(voidCallback: settings.arguments as VoidCallback));
