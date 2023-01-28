@@ -21,7 +21,6 @@ import 'package:doctor_app/data/repositories/review_repository.dart';
 import 'package:doctor_app/ui/add_review/bloc/add_review_bloc.dart';
 import 'package:doctor_app/ui/router.dart';
 import 'package:doctor_app/ui/tab_box/profile/sub_screens/appearance/bloc/theme_cubit.dart';
-import 'package:doctor_app/ui/theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -127,22 +126,16 @@ class MyApp extends StatelessWidget {
       designSize: const Size(428, 926),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (context, child) => AdaptiveTheme(
-        light: DoctorUzTheme.lightTheme,
-        dark: DoctorUzTheme.darkTheme,
-        initial: AdaptiveThemeMode.system,
         builder: (light, dark) => MaterialApp(
           localizationsDelegates: context.localizationDelegates,
           supportedLocales: context.supportedLocales,
           locale: context.locale,
           title: 'Doctor Uz',
-          theme: light,
-          darkTheme: dark,
           debugShowCheckedModeBanner: false,
           initialRoute: splashPage,
           onGenerateRoute: MyRouter.generateRoute,
         ),
-      ),
+
     );
   }
 }

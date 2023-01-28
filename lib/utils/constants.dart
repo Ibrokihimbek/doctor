@@ -40,6 +40,7 @@ const String settingsSecure = '/settings_secure';
 const String settingsAppear = '/settings_appearance';
 const String appearanceRoute = '/appearance_route';
 const String languageRoute = '/language_route';
+const String specialDoctor = '/special_doctor_route';
 
 
 myHeight(context) => MediaQuery.of(context).size.height;

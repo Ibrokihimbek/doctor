@@ -33,19 +33,19 @@ class NotificationsPage extends StatelessWidget {
               },
               icon: const Icon(Icons.delete),
             ),
-            TextButton(
-                onPressed: () {
-                  NotificationApiService.sendNotificationToAll("my_news");
-                },
-                child: Text("All")),
-            TextButton(
-                onPressed: () async {
-                  String fcmToken =
-                      await FirebaseMessaging.instance.getToken() as String;
-                  NotificationApiService.sendNotificationToUser(
-                      fcmToken: fcmToken, message: "birkishilik message edi");
-                },
-                child: Text("Single")),
+            // TextButton(
+            //     onPressed: () {
+            //       NotificationApiService.sendNotificationToAll("my_news");
+            //     },
+            //     child: Text("All")),
+            // TextButton(
+            //     onPressed: () async {
+            //       String fcmToken =
+            //           await FirebaseMessaging.instance.getToken() as String;
+            //       NotificationApiService.sendNotificationToUser(
+            //           fcmToken: fcmToken, message: "birkishilik message edi");
+            //     },
+            //     child: Text("Single")),
           ],
           iconTheme: const IconThemeData(color: Colors.blue),
           title: Text(
@@ -61,7 +61,8 @@ class NotificationsPage extends StatelessWidget {
               if (state is LoadNotificationProgress) {
                 return const Center(child: CircularProgressIndicator());
               } else if (state is LoadNotificationSuccess) {
-                return Column(
+                return
+                  Column(
                   children: [
                     ...List.generate(state.notifications.length, (index) {
                       return Padding(

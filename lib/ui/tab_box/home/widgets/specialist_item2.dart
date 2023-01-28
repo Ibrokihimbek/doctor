@@ -21,15 +21,23 @@ class Specialist extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 181.h,
-      width: 120.w,
+      width: 100.w,
       decoration: BoxDecoration(
-        color: Color(int.parse(color)).withOpacity(0.8),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            // color: Color(0xff93d1fe).withOpacity(0.16),
+            // blurRadius: 16,
+            color: Color(0xff121212).withOpacity(0.07),
+            blurRadius: 16,
+          )
+        ],
         borderRadius: BorderRadius.circular(12.r),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SvgPicture.asset(
+          Image.network(
             imgUrl,
             width: 50.w,
           ),
@@ -37,14 +45,14 @@ class Specialist extends StatelessWidget {
           Text(
             name,
             style: MyTextStyle.sfProSemiBold
-                .copyWith(color: Colors.white, fontSize: 18.sp),
+                .copyWith(color: Colors.black, fontSize: 18.sp,fontWeight: FontWeight.w500),
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 10.h),
-          Text(
-            "$numbers doctors".tr(),
-            style: const TextStyle(color: Colors.white),
-          )
+          // Text(
+          //   "$numbers shifokorlar",
+          //   style:  TextStyle(color: Colors.white,fontSize: 16.sp),
+          // )
         ],
       ),
     );

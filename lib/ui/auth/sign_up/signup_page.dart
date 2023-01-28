@@ -74,27 +74,27 @@ class SignUpPage extends StatelessWidget {
                       height: m_h(context) * 0.022,
                     ),
                     Text(
-                      "Sign Up for free",
+                      "Bepul ro'yxatdan o'tish",
                       style: TextStyle(
                           fontSize: 24.sp, fontWeight: FontWeight.w500),
                     ),
                     CustomTextField(
                       controller: nameController,
-                      hintText: "Name",
+                      hintText: "Isim",
                     ),
                     CustomTextField(
                       controller: emailController,
-                      hintText: "Email",
+                      hintText: "Elektron pochta",
                     ),
                     CustomTextField(
                       controller: passwordController,
-                      hintText: "Password",
+                      hintText: "Parol",
                     ),
                     SizedBox(
                       height: m_h(context) * 0.022,
                     ),
                     AuthButton(
-                        title: "Sign Up  ",
+                        title: "Ro'yxatdan o'tish  ",
                         email: emailController.text,
                         password: passwordController.text,
                         name: nameController.text),
@@ -105,7 +105,7 @@ class SignUpPage extends StatelessWidget {
                       height: m_h(context) * 0.003,
                     ),
                     Text(
-                      "or continue with",
+                      "yoki davom eting",
                       style: TextStyle(color: Colors.black, fontSize: 18.sp),
                     ),
                     SizedBox(
@@ -114,10 +114,6 @@ class SignUpPage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        AuthWithButton(
-                            title: "Facebook",
-                            image: AppIcons.facebook,
-                            isCreate: true),
                         AuthWithButton(
                             title: "Google",
                             image: AppIcons.google,
@@ -131,7 +127,7 @@ class SignUpPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Already have an account? ",
+                          "Hisobingiz bormi? ",
                           style: TextStyle(color: Colors.grey, fontSize: 18.sp),
                         ),
                         InkWell(
@@ -139,7 +135,7 @@ class SignUpPage extends StatelessWidget {
                               Navigator.pushReplacementNamed(context, loginPage);
                             },
                             child: Text(
-                              "Sign In",
+                              "Kirish",
                               style: TextStyle(
                                   color: MyColors.primary,
                                   fontWeight: FontWeight.bold,

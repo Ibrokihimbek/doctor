@@ -19,7 +19,7 @@ class CustomTextBold extends StatelessWidget {
       tr('doctor_details_screen.$text'),
       style: MyTextStyle.sfProMedium.copyWith(
         color: color,
-        fontSize: 16.sp,
+        fontSize: 18.sp,
         fontWeight: FontWeight.w600,
       ),
     );

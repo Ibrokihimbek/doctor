@@ -13,7 +13,7 @@ class HomeAppbar extends StatelessWidget implements PreferredSize {
     required this.logo,
     required this.title,
     required this.onNotificationTap,
-    required this.onFavouritesTap,
+    // required this.onFavouritesTap,
     this.favouritesLogo = SocialIcons.notification,
     this.notificationlogo = ActionIcons.favorite,
   });
@@ -21,7 +21,7 @@ class HomeAppbar extends StatelessWidget implements PreferredSize {
   final String title;
   final String logo;
   final VoidCallback onNotificationTap;
-  final VoidCallback onFavouritesTap;
+  // final VoidCallback onFavouritesTap;
   final String notificationlogo;
   final String favouritesLogo;
 
@@ -42,24 +42,6 @@ class HomeAppbar extends StatelessWidget implements PreferredSize {
         ),
       ),
       actions: [
-        Padding(
-          padding: EdgeInsets.symmetric(vertical: 8.h).r,
-          child: InkWell(
-            onTap: onFavouritesTap,
-            child: Container(
-              height: 44.h,
-              width: 44.w,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12.r),
-                color: MyColors.primary.withOpacity(0.1),
-              ),
-              child: Center(
-                child: SvgPicture.asset(notificationlogo,
-                    color: MyColors.primary, width: 24.w, height: 24.h),
-              ),
-            ),
-          ),
-        ),
         Padding(
           padding:
               EdgeInsets.only(left: 16.w, right: 24.w, top: 8.h, bottom: 8.h).r,

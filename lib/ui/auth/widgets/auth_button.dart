@@ -4,6 +4,7 @@ import 'package:doctor_app/ui/auth/widgets/animated_snackbar.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 // ignore: must_be_immutable
@@ -25,7 +26,7 @@ class AuthButton extends StatelessWidget {
           // ignore: unnecessary_type_check
           if(state is ValidatingStatusState){
             if(state.passwordValidated && state.emailValidated) {
-              if (title == "Sign Up  ") {
+              if (title == "Ro'yxatdan o'tish  ") {
                 String? token = await FirebaseMessaging.instance.getToken();
                 // ignore: use_build_context_synchronously
                 context.read<AuthBloc>().add(CreateUserEvent(
@@ -52,7 +53,7 @@ class AuthButton extends StatelessWidget {
                     Color(0xFF6499FF),
                   ]
               ),
-              borderRadius: BorderRadius.circular(MediaQuery.of(context).size.height*0.2)
+              borderRadius: BorderRadius.circular(12.r)
           ),
           child:  Center(child: Text(title,style: const TextStyle(color: Colors.white,fontSize: 16),)),
         ),
