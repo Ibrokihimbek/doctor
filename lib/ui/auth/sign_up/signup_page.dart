@@ -22,13 +22,11 @@ class SignUpPage extends StatelessWidget {
   TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
 
-
-
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<AuthBloc,AuthState>(
+    return BlocConsumer<AuthBloc, AuthState>(
       listener: (context, state) async {
-        if(state is SigningInProgress){
+        if (state is SigningInProgress) {
           showDialog(
             context: context,
             barrierDismissible: false,
@@ -39,7 +37,7 @@ class SignUpPage extends StatelessWidget {
           MySnackBar(context,
               notification: state.errorText,
               color: Colors.red,
-              icon: Icon(
+              icon: const Icon(
                 Icons.error,
                 color: Colors.white,
               ));
@@ -68,10 +66,10 @@ class SignUpPage extends StatelessWidget {
                   children: [
                     Image.asset(
                       AppIcons.logoWithBackground,
-                      width: m_w(context) * 0.55,
+                      width: m_w(context) * 0.4,
                     ),
                     SizedBox(
-                      height: m_h(context) * 0.022,
+                      height: m_h(context) * 0.06,
                     ),
                     Text(
                       "Bepul ro'yxatdan o'tish",
@@ -132,7 +130,8 @@ class SignUpPage extends StatelessWidget {
                         ),
                         InkWell(
                             onTap: () {
-                              Navigator.pushReplacementNamed(context, loginPage);
+                              Navigator.pushReplacementNamed(
+                                  context, loginPage);
                             },
                             child: Text(
                               "Kirish",

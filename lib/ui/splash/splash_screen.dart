@@ -47,8 +47,8 @@ class _SplashScreenState extends State<SplashScreen> {
           ),
           Center(
             child: SizedBox(
-              height: myHeight(context) * 0.4,
-              width: myWidth(context) * 0.8,
+              height: myHeight(context) * 0.2,
+              width: myWidth(context) * 0.6,
               child: Image.asset(
                 AppIcons.logoWithBackground,
               ),
@@ -57,7 +57,7 @@ class _SplashScreenState extends State<SplashScreen> {
           SizedBox(
             height: myHeight(context) * 0.139,
           ),
-          const CircularProgressIndicator()
+          const CircularProgressIndicator(color: Color(0xff0000ff),)
         ],
       ),
     );

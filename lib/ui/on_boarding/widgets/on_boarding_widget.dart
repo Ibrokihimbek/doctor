@@ -48,9 +48,12 @@ Widget onBoardingWidget(
               ),
               Center(
                   child: Text(
+                textAlign: TextAlign.center,
                 desc1,
-                style:
-                    TextStyle(fontSize: 16.sp, color: const Color(0xFF2C3A4B)),
+                style: TextStyle(
+                  fontSize: 16.sp,
+                  color: const Color(0xFF2C3A4B),
+                ),
               )),
               SizedBox(
                 height: 2.h,

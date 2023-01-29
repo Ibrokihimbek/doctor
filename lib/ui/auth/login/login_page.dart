@@ -20,65 +20,91 @@ class SignInPage extends StatelessWidget {
   TextEditingController passwordController = TextEditingController();
   TextEditingController emailController = TextEditingController();
 
-
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<AuthBloc,AuthState>(
+    return BlocConsumer<AuthBloc, AuthState>(
       builder: (context, state) => Scaffold(
         body: SafeArea(
           child: SingleChildScrollView(
-            physics:const  BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Container(
-              padding:  EdgeInsets.all(m_h(context)*0.028),
+              padding: EdgeInsets.all(m_h(context) * 0.028),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(
                     AppIcons.logoWithBackground,
-                    width: m_w(context)*0.55,
+                    width: m_w(context) * 0.4,
                   ),
-                   SizedBox(
-                    height: m_h(context)*0.022,
-                  ),
-                   Text(
-                    "Hisobingizga kiring",
-                    style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w500),
-                  ),
-                  CustomTextField(controller: emailController,hintText: "Elektron pochta",),
-                  CustomTextField(controller: passwordController,hintText: "Parol",),
                   SizedBox(
-                    height: m_h(context)*0.022,
+                    height: m_h(context) * 0.1,
                   ),
-                  AuthButton(title: "Kirish",password: passwordController.text,email: emailController.text),
-                   SizedBox(
-                    height: m_h(context)*0.003,
+                  Text(
+                    "Hisobingizga kiring",
+                    style:
+                        TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w500),
                   ),
-                   SizedBox(
-                    height: m_h(context)*0.03,
+                  CustomTextField(
+                    controller: emailController,
+                    hintText: "Elektron pochta",
                   ),
-                   Text("yoki davom eting",style: TextStyle(color: Colors.black,fontSize: 18.sp,fontWeight: FontWeight.w500),),
-                   SizedBox(
-                    height: m_h(context)*0.05,
+                  CustomTextField(
+                    controller: passwordController,
+                    hintText: "Parol",
+                  ),
+                  SizedBox(
+                    height: m_h(context) * 0.022,
+                  ),
+                  AuthButton(
+                      title: "Kirish",
+                      password: passwordController.text,
+                      email: emailController.text),
+                  SizedBox(
+                    height: m_h(context) * 0.003,
+                  ),
+                  SizedBox(
+                    height: m_h(context) * 0.03,
+                  ),
+                  Text(
+                    "yoki davom eting",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  SizedBox(
+                    height: m_h(context) * 0.05,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-
-                      AuthWithButton(title: "Google", image: AppIcons.google,isCreate: false),
+                      AuthWithButton(
+                          title: "Google",
+                          image: AppIcons.google,
+                          isCreate: false),
                     ],
                   ),
-                   SizedBox(
-                    height: m_h(context)*0.07,
+                  SizedBox(
+                    height: m_h(context) * 0.07,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                       Text("Hisobingiz yo'qmi? ",style: TextStyle(color: Colors.grey,fontSize: 18.sp),),
+                      Text(
+                        "Hisobingiz yo'qmi? ",
+                        style: TextStyle(color: Colors.grey, fontSize: 18.sp),
+                      ),
                       InkWell(
-                          onTap: (){
+                          onTap: () {
                             Navigator.pushReplacementNamed(context, signUpPage);
                           },
-                          child:  Text("Ro'yxatdan o'tish",style: TextStyle(color: MyColors.primary,fontWeight: FontWeight.bold,fontSize: 18.sp),))
+                          child: Text(
+                            "Ro'yxatdan o'tish",
+                            style: TextStyle(
+                                color: MyColors.primary,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18.sp),
+                          ))
                     ],
                   ),
                 ],
@@ -87,22 +113,28 @@ class SignInPage extends StatelessWidget {
           ),
         ),
       ),
-     listener: (context, state) {
-       if(state is SigningInProgress){
-         showDialog(
-           context: context,
-           barrierDismissible: false,
-           builder: (BuildContext context) => loadingDialog(),
-         );
-       }
-       if(state is UserSignedInFailury){
-         Navigator.pop(context);
-         MySnackBar(context, notification: state.errorText, color: Colors.red, icon: Icon(Icons.error,color: Colors.white,));
-       }
-       if(state is UserSignedInSuccessfully){
-         Navigator.pushNamedAndRemoveUntil(context, tabBox, (route) => false);
-       }
-     },
+      listener: (context, state) {
+        if (state is SigningInProgress) {
+          showDialog(
+            context: context,
+            barrierDismissible: false,
+            builder: (BuildContext context) => loadingDialog(),
+          );
+        }
+        if (state is UserSignedInFailury) {
+          Navigator.pop(context);
+          MySnackBar(context,
+              notification: state.errorText,
+              color: Colors.red,
+              icon: Icon(
+                Icons.error,
+                color: Colors.white,
+              ));
+        }
+        if (state is UserSignedInSuccessfully) {
+          Navigator.pushNamedAndRemoveUntil(context, tabBox, (route) => false);
+        }
+      },
     );
   }
 }

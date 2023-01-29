@@ -7,6 +7,7 @@ import 'package:doctor_app/ui/tab_box/profile/sub_screens/widgets/rich_text.dart
 import 'package:doctor_app/ui/tab_box/profile/sub_screens/widgets/text_field.dart';
 import 'package:doctor_app/ui/tab_box/profile/sub_screens/widgets/update_image.dart';
 import 'package:doctor_app/ui/tab_box/profile/sub_screens/widgets/upload_image_view.dart';
+import 'package:doctor_app/ui/widgets/custom_appbar.dart';
 import 'package:doctor_app/ui/widgets/widgets.dart';
 import 'package:doctor_app/utils/constants.dart';
 import 'package:doctor_app/utils/date_format.dart';
@@ -59,10 +60,9 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
     return BlocBuilder<UserBloc, UserSingleState>(
       builder: (context, state) {
         return Scaffold(
-          appBar: AppbarByLogoWidget(
-            logo: AppIcons.logo,
+          appBar: const CustomAppBar(
             title: 'Profile',
-            onAddTap: () {},
+            widget: SizedBox(),
           ),
           body: Padding(
             padding: const EdgeInsets.all(24),
@@ -102,9 +102,7 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
                       SizedBox(height: 12.0.h),
                       const RichTextWidget(word: 'Gender'),
                       SizedBox(height: 12.0.h),
-                      DropDown(value: (v) {
-
-                      }),
+                      DropDown(value: (v) {}),
                       SizedBox(height: 12.0.h),
                       const RichTextWidget(word: 'Date of birth'),
                       SizedBox(height: 12.0.h),

@@ -17,21 +17,33 @@ class ImageWithStack extends StatelessWidget {
           width: 100.w,
           height: 100.h,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(12.r),
-              bottomLeft: Radius.circular(12.r),
-            ),
+            shape: BoxShape.circle,
+            color: Color(0xff7DE5ED)
           ),
           child: ClipRRect(
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(12.r),
-              bottomLeft: Radius.circular(12.r),
+              topLeft: Radius.circular(50.r),
+              bottomLeft: Radius.circular(50.r),
             ),
             child: Image.network(
               imgName,
-              height: 100.h,
-              width: 100.w,
+              height: 80.h,
+              width: 80.w,
               fit: BoxFit.cover,
+            ),
+          ),
+        ),
+        Positioned(
+          top: 62.h,
+          left: 62.w,
+          child: Container(
+            width: 46.w,
+            height: 46.h,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(12.r),
+              ),
             ),
           ),
         ),

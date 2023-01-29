@@ -13,8 +13,10 @@ class AppbarByLogo extends StatelessWidget implements PreferredSize {
     required this.title,
     required this.onAddTap,
     this.rightLogo = ContentIcons.addCircleOutline,
+    this.yesLogo = true,
   });
 
+  bool yesLogo;
   String title;
   String logo;
   VoidCallback onAddTap;
@@ -25,10 +27,6 @@ class AppbarByLogo extends StatelessWidget implements PreferredSize {
     return AppBar(
       backgroundColor: MyColors.white,
       elevation: 0,
-      leading: Padding(
-        padding: EdgeInsets.only(left: 24.w).r,
-        child: Image.asset(logo, width: 36.w, height: 36.h),
-      ),
       title: Text(
         title,
         style: MyTextStyle.sfProSemiBold.copyWith(
@@ -36,27 +34,33 @@ class AppbarByLogo extends StatelessWidget implements PreferredSize {
           color: MyColors.black,
         ),
       ),
-    
       actions: [
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 8.h).r,
-          child: InkWell(
-            onTap: onAddTap,
-            child: Container(
-              height: 44.h,
-              width: 44.w,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12.r),
-                color: MyColors.primary.withOpacity(0.1),
-              ),
-              child: Center(
-                child: SvgPicture.asset(rightLogo,
-                    color: MyColors.primary, width: 24.w, height: 24.h),
-              ),
-            ),
-          ),
-        )
+        yesLogo == false
+            ? const SizedBox()
+            : Padding(
+                padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 8.h).r,
+                child: InkWell(
+                  onTap: onAddTap,
+                  child: Container(
+                    height: 44.h,
+                    width: 44.w,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12.r),
+                      color: Color(0xff2972FE),
+                    ),
+                    child: Center(
+                      child: SvgPicture.asset(rightLogo,
+                          color: Colors.white, width: 24.w, height: 24.h),
+                    ),
+                  ),
+                ),
+              )
       ],
+      systemOverlayStyle: const SystemUiOverlayStyle(
+        statusBarColor: MyColors.white,
+        statusBarIconBrightness: Brightness.dark,
+        statusBarBrightness: Brightness.light,
+      ),
     );
   }
 

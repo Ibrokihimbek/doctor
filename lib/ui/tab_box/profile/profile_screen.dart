@@ -26,7 +26,7 @@ class ProfileScreen extends StatelessWidget {
         backgroundColor: MyColors.white,
         appBar: AppbarByLogo(
           logo: AppIcons.logo,
-          title: tr('profile_screen.profile'),
+          title: 'Profil',
           onAddTap: () {
             Navigator.pushNamed(
               context,

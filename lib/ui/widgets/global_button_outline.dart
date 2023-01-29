@@ -22,7 +22,7 @@ class GlobalButtonOutline extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border.all(color: MyColors.actionPrimaryDefault, width: 2),
         color: Color(0xff2972FE),
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(30),
       ),
       child: ElevatedButton(
         onPressed: onTap,
@@ -30,7 +30,7 @@ class GlobalButtonOutline extends StatelessWidget {
           backgroundColor: Colors.white,
           //shadowColor: Colors.transparent,
           shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
         ),
         child: Text(
           buttonText.tr(),

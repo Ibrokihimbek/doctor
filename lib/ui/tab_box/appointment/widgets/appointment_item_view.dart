@@ -30,11 +30,16 @@ class AppointmentItemView extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.only(right: 20.w).r,
           width: 280.w,
-          height: 100.h,
+          height: 110.h,
           decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Color(0xff121212).withOpacity(0.12),
+                blurRadius: 12
+              )
+            ],
             borderRadius: BorderRadius.circular(12.r),
             color: MyColors.neutralWhite,
-            border: Border.all(width: 1.w, color: Colors.grey),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
