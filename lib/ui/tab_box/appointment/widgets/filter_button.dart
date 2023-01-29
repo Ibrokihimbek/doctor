@@ -12,35 +12,28 @@ class FilterButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        const Flexible(child: SearchTextField()),
-        SizedBox(width: 12.w,),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 8.h).r,
-          child: InkWell(
-            onTap: () {
-            Navigator.pushNamed(
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 8.h).r,
+      child: InkWell(
+        onTap: () {
+          Navigator.pushNamed(
             context,
             topDoctorsRoute,
-            );
-            },
-            child: Container(
-              height: 44.h,
-              width: 44.w,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12.r),
-                color: Color(0xff2972FE),
-              ),
-              child: Center(
-                child: SvgPicture.asset( ContentIcons.addCircleOutline,
-                    color: Colors.white, width: 24.w, height: 24.h),
-              ),
-            ),
+          );
+        },
+        child: Container(
+          height: 44.h,
+          width: 44.w,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12.r),
+            color: const Color(0xff2972FE),
           ),
-        )
-      ],
+          child: Center(
+            child: SvgPicture.asset(ContentIcons.addCircleOutline,
+                color: Colors.white, width: 24.w, height: 24.h),
+          ),
+        ),
+      ),
     );
   }
 }

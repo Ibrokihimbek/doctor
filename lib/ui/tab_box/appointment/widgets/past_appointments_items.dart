@@ -1,5 +1,6 @@
 import 'package:doctor_app/bloc/get_appointements_cubit/get_appointments_bloc.dart';
 import 'package:doctor_app/bloc/get_appointements_cubit/user_appointments_state.dart';
+import 'package:doctor_app/data/models/appointment/appointment_model.dart';
 import 'package:doctor_app/ui/tab_box/appointment/widgets/appointment_item_view.dart';
 import 'package:doctor_app/ui/tab_box/appointment/widgets/when_no_data.dart';
 import 'package:doctor_app/utils/color.dart';
@@ -11,7 +12,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 
 class PastAppointmentItems extends StatelessWidget {
-  const PastAppointmentItems({super.key});
+  final List<AppointmentModel> appointments;
+  const PastAppointmentItems({super.key, required this.appointments});
 
   @override
   Widget build(BuildContext context) {

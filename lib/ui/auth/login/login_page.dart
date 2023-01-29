@@ -40,23 +40,23 @@ class SignInPage extends StatelessWidget {
                     height: m_h(context) * 0.1,
                   ),
                   Text(
-                    "Hisobingizga kiring",
+                    "Sign in to your account",
                     style:
                         TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w500),
                   ),
                   CustomTextField(
                     controller: emailController,
-                    hintText: "Elektron pochta",
+                    hintText: "Email",
                   ),
                   CustomTextField(
                     controller: passwordController,
-                    hintText: "Parol",
+                    hintText: "Password",
                   ),
                   SizedBox(
                     height: m_h(context) * 0.022,
                   ),
                   AuthButton(
-                      title: "Kirish",
+                      title: "Sign in",
                       password: passwordController.text,
                       email: emailController.text),
                   SizedBox(
@@ -66,7 +66,7 @@ class SignInPage extends StatelessWidget {
                     height: m_h(context) * 0.03,
                   ),
                   Text(
-                    "yoki davom eting",
+                    "or continue with",
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 18.sp,
@@ -91,7 +91,7 @@ class SignInPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Hisobingiz yo'qmi? ",
+                        "Don’t have an account? ",
                         style: TextStyle(color: Colors.grey, fontSize: 18.sp),
                       ),
                       InkWell(
@@ -99,7 +99,7 @@ class SignInPage extends StatelessWidget {
                             Navigator.pushReplacementNamed(context, signUpPage);
                           },
                           child: Text(
-                            "Ro'yxatdan o'tish",
+                            "Sign up",
                             style: TextStyle(
                                 color: MyColors.primary,
                                 fontWeight: FontWeight.bold,

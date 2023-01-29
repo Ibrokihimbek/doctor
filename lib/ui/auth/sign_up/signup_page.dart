@@ -72,27 +72,27 @@ class SignUpPage extends StatelessWidget {
                       height: m_h(context) * 0.06,
                     ),
                     Text(
-                      "Bepul ro'yxatdan o'tish",
+                      "Sign up for free",
                       style: TextStyle(
                           fontSize: 24.sp, fontWeight: FontWeight.w500),
                     ),
                     CustomTextField(
                       controller: nameController,
-                      hintText: "Isim",
+                      hintText: "Name",
                     ),
                     CustomTextField(
                       controller: emailController,
-                      hintText: "Elektron pochta",
+                      hintText: "Email",
                     ),
                     CustomTextField(
                       controller: passwordController,
-                      hintText: "Parol",
+                      hintText: "Password",
                     ),
                     SizedBox(
                       height: m_h(context) * 0.022,
                     ),
                     AuthButton(
-                        title: "Ro'yxatdan o'tish  ",
+                        title: "Sign up",
                         email: emailController.text,
                         password: passwordController.text,
                         name: nameController.text),
@@ -103,7 +103,7 @@ class SignUpPage extends StatelessWidget {
                       height: m_h(context) * 0.003,
                     ),
                     Text(
-                      "yoki davom eting",
+                      "or continue with",
                       style: TextStyle(color: Colors.black, fontSize: 18.sp),
                     ),
                     SizedBox(
@@ -125,7 +125,7 @@ class SignUpPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Hisobingiz bormi? ",
+                          "Already have an account? ",
                           style: TextStyle(color: Colors.grey, fontSize: 18.sp),
                         ),
                         InkWell(
@@ -134,7 +134,7 @@ class SignUpPage extends StatelessWidget {
                                   context, loginPage);
                             },
                             child: Text(
-                              "Kirish",
+                              "Sign in",
                               style: TextStyle(
                                   color: MyColors.primary,
                                   fontWeight: FontWeight.bold,

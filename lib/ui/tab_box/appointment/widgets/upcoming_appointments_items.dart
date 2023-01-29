@@ -12,7 +12,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 
 class UpcomingAppointmentsItems extends StatelessWidget {
-  const UpcomingAppointmentsItems({super.key});
+  final List<AppointmentModel> appointments;
+  const UpcomingAppointmentsItems({super.key, required this.appointments});
 
   @override
   Widget build(BuildContext context) {

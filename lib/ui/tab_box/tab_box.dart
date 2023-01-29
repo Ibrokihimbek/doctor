@@ -19,7 +19,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class TabBox extends StatefulWidget {
-   TabBox({Key? key}) : super(key: key);
+  TabBox({Key? key}) : super(key: key);
 
   @override
   State<TabBox> createState() => _TabBoxState();
@@ -54,34 +54,47 @@ class _TabBoxState extends State<TabBox> {
       body: BlocBuilder<TabCubit, TabsState>(
         builder: (cubit, state) {
           return Scaffold(
-            body:  screens[state.currentPage],
+            body: screens[state.currentPage],
             bottomNavigationBar: BottomNavigationBar(
                 currentIndex: state.currentPage,
                 selectedItemColor: const Color(0xff2972FE),
                 unselectedItemColor: Colors.grey.withOpacity(0.6),
-                onTap: (value)=>context.read<TabCubit>().changeTabState(value),
+                onTap: (value) =>
+                    context.read<TabCubit>().changeTabState(value),
                 selectedLabelStyle: const TextStyle(color: Colors.grey),
                 unselectedLabelStyle: const TextStyle(color: Colors.grey),
-                items:  [
+                items: [
                   const BottomNavigationBarItem(
-                      icon: Icon(Icons.home,size: 34,),
-                      label: 'Asosiy',
+                    icon: Icon(
+                      Icons.home,
+                      size: 34,
+                    ),
+                    label: 'Home',
                   ),
                   BottomNavigationBarItem(
-                      icon: SvgPicture.asset(ActionIcons.meeting,width: 30,height: 30,color: state.currentPage==1?Color(0xff2972FE):Colors.grey,),
-                      label: 'Uchrashuv'
-                  ),
+                      icon: SvgPicture.asset(
+                        ActionIcons.meeting,
+                        width: 30,
+                        height: 30,
+                        color: state.currentPage == 1
+                            ? Color(0xff2972FE)
+                            : Colors.grey,
+                      ),
+                      label: 'Appointment'),
                   const BottomNavigationBarItem(
-                      icon: Icon(Icons.info,size: 34,),
-                      label: "Ma'lumot"
-                  ),
+                      icon: Icon(
+                        Icons.info,
+                        size: 34,
+                      ),
+                      label: "Info"),
                   const BottomNavigationBarItem(
-                      icon: Icon(Icons.person,size: 34,),
-                      label: "Profil"
-                  ),
+                      icon: Icon(
+                        Icons.person,
+                        size: 34,
+                      ),
+                      label: "Profile"),
                 ]),
           );
-
         },
       ),
     );
