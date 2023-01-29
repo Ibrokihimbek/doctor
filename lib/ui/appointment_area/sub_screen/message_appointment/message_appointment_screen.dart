@@ -20,7 +20,7 @@ class MessageAppointmentScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        title: "messaging".tr(),
+        title: "messaging",
         widget: InkWell(
           onTap: () {
             Navigator.pushNamed(

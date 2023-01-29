@@ -48,7 +48,7 @@ class CallEndScreen extends StatelessWidget {
               buttonText: 'Write a Review',
               onTap: () {
                 Navigator.pushNamed(context, addReviewRoute,
-                    arguments: {'info': model});
+                    arguments: {'infoModel': model});
               },
               isActive: true,
             ),

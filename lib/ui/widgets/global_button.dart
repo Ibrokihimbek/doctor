@@ -39,12 +39,11 @@ class GlobalButton extends StatelessWidget {
           ),
         ),
         child: Text(
-          tr('global.$buttonText'),
+          buttonText,
           style: MyTextStyle.sfProSemiBold.copyWith(
-            fontSize: 16.sp,
-            color: Colors.white,
-            fontWeight: FontWeight.w500
-          ),
+              fontSize: 16.sp,
+              color: Colors.white,
+              fontWeight: FontWeight.w500),
         ),
       ),
     );
