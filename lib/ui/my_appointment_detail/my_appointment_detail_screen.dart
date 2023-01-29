@@ -2,6 +2,7 @@ import 'package:doctor_app/data/models/appointment/appointment_model.dart';
 import 'package:doctor_app/ui/my_appointment_detail/widgets/my_appointment_detail_items.dart';
 import 'package:doctor_app/ui/tab_box/appointment/widgets/appointment_item_view.dart';
 import 'package:doctor_app/ui/widgets/custom_appbar.dart';
+import 'package:doctor_app/ui/widgets/doctorItems.dart';
 import 'package:doctor_app/ui/widgets/doctor_stats.dart';
 import 'package:doctor_app/utils/color.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -46,11 +47,10 @@ class _MyAppointmentDetailScreenState extends State<MyAppointmentDetailScreen> {
                 ),
               ],
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 20.h, bottom: 24.h).r,
-              child: const DoctorStats(
-                  patients: "500+", yearsExperiences: "15+", reviews: "3800+"),
-            ),
+            DoctorItems(
+              patients: '500+',
+              yearsExperiences: '15+',
+              reviews: '380+',),
             MyAppointmentsDetails(
               model: widget.appointmentModel,
             ),

@@ -65,34 +65,6 @@ class UpcomingAppointmentsItems extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(vertical: 16.h).r,
-                            child: Text(
-                              DateFormat.yMMMMEEEEd()
-                                  .format(DateTime.now())
-                                  .toString(),
-                              style: MyTextStyle.sfProRegular.copyWith(
-                                  color: MyColors.neutral1, fontSize: 16),
-                            ),
-                          ),
-                          ...List.generate(
-                            state.appointmentModel.length,
-                            (index) => Row(
-                              children: [
-                                Expanded(
-                                  child: AppointmentItemView(
-                                    model: state.appointmentModel[index],
-                                    isTrue: true,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(height: 80.h),
-                        ])
                   ],
                 )
               : MessNoDataScreen();

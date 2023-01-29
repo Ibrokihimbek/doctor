@@ -21,10 +21,6 @@ class AppbarByLogoWidget extends StatelessWidget implements PreferredSize {
     return AppBar(
       backgroundColor: MyColors.white,
       elevation: 0,
-      leading: Padding(
-        padding: EdgeInsets.only(left: 24.w).r,
-        child: Image.asset(logo, width: 36.w, height: 36.h),
-      ),
       title: Text(
         title,
         style: MyTextStyle.sfProSemiBold.copyWith(

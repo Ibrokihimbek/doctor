@@ -7,6 +7,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:doctor_app/utils/color.dart';
 import 'package:doctor_app/utils/style.dart';
 
+import '../../../../utils/icons/app_icons.dart';
+
 class HomeAppbar extends StatelessWidget implements PreferredSize {
   const HomeAppbar({
     super.key,
@@ -30,10 +32,6 @@ class HomeAppbar extends StatelessWidget implements PreferredSize {
     return AppBar(
       backgroundColor: MyColors.white,
       elevation: 0,
-      leading: Padding(
-        padding: EdgeInsets.only(left: 24.w).r,
-        child: Image.asset(logo, width: 36.w, height: 36.h),
-      ),
       title: Text(
         title,
         style: MyTextStyle.sfProSemiBold.copyWith(
@@ -41,27 +39,7 @@ class HomeAppbar extends StatelessWidget implements PreferredSize {
           color: MyColors.black,
         ),
       ),
-      actions: [
-        Padding(
-          padding:
-              EdgeInsets.only(left: 16.w, right: 24.w, top: 8.h, bottom: 8.h).r,
-          child: InkWell(
-            onTap: onNotificationTap,
-            child: Container(
-              height: 44.h,
-              width: 44.w,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12.r),
-                color: MyColors.primary.withOpacity(0.1),
-              ),
-              child: Center(
-                child: SvgPicture.asset(favouritesLogo,
-                    color: MyColors.primary, width: 24.w, height: 24.h),
-              ),
-            ),
-          ),
-        ),
-      ],
+
     );
   }
 

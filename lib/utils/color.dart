@@ -6,7 +6,7 @@ class MyColors {
   static const Color transparent = Colors.transparent;
 
   // Primary
-  static const Color primary = Colors.blue;
+  static const Color primary = Color(0xff0000ff);
 
   // Secondary
   static const Color secondary = Color(0xFFFFB800);

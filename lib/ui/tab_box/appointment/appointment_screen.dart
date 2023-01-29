@@ -28,15 +28,11 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppbarByLogo(
+        yesLogo: false,
         logo: FileIcons.logo,
-        title: tr("appointment_screen.my_appointments"),
-        onAddTap: () {
-          Navigator.pushNamed(
-            context,
-            topDoctorsRoute,
-          );
-        },
+        title: 'Mening Uchrashuvlarim',
         rightLogo: ContentIcons.addCircleOutline,
+        onAddTap: () {},
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
@@ -47,6 +43,10 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(
+                height: 24.h,
+              ),
+              const FilterButton(),
               SizedBox(
                 height: 26.h,
               ),
@@ -65,14 +65,15 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                       height: 43.h,
                       width: 180.w,
                       decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                              color: Color(0xff121212).withOpacity(0.12),
+                              blurRadius: 12)
+                        ],
                         borderRadius: BorderRadius.circular(24.r),
                         color: pageIndex == index
                             ? MyColors.actionPrimaryDefault
                             : MyColors.actionPrimaryInverted,
-                        border: Border.all(
-                          color: MyColors.primary,
-                          width: 2.w,
-                        ),
                       ),
                       child: Center(
                         child: Text(
@@ -88,10 +89,6 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 24.h,
-              ),
-              const FilterButton(),
               Expanded(
                 child: pageIndex == 0
                     ? const UpcomingAppointmentsItems()
