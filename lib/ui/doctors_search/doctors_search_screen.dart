@@ -74,6 +74,7 @@ class _DoctorsSearchScreenState extends State<DoctorsSearchScreen> {
                 ),
               ),
               body: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

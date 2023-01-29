@@ -16,7 +16,7 @@ class DoctorSearchRepository {
 
   Stream<List<DoctorModel>> getDoctorsBySpeciality(String name) => _firestore
       .collection("doctors")
-      .where("speciality_name", isEqualTo: name)
+      .where("speciality_id", isEqualTo: name)
       .snapshots()
       .map(
         (event) =>
