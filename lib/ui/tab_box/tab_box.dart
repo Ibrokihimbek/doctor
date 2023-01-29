@@ -34,7 +34,7 @@ class _TabBoxState extends State<TabBox> {
     screens = [
       const HomeScreen(),
       const AppointmentScreen(),
-      const HistoryPage(),
+      const OpenDataScreen(),
       ProfileScreen()
     ];
     super.initState();

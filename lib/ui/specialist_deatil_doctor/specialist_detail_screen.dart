@@ -28,14 +28,13 @@ class SpecialistDetailScreen extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
-          child: BlocBuilder<SpecialDetailCubit, SpecialDetailState>(
-              builder: (context, state) {
-            if (state is LoadInProgress) {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            } else if (state is LoadInSuccess) {
-              return Column(
+          child: BlocBuilder<SpecialDetailCubit,SpecialDetailState>(builder: (context,state){
+            if(state is LoadInProgress){
+              return const Center(child: CircularProgressIndicator(),);
+            }else if(state is LoadInSuccess){
+              return
+                Column(
+
                 children: [
                   ...List.generate(state.doctors.length, (index) {
                     var item = state.doctors[index];

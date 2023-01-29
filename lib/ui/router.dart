@@ -163,7 +163,7 @@ class MyRouter {
       case historyMessageDetailRoute:
         return navigateTo(MessagesHistoryDetailScreen());
       case historyRoute:
-        return navigateTo(HistoryPage());
+        return navigateTo(OpenDataScreen());
       case historyCallDetailRoute:
         return navigateTo(CallHistoryDetailScreen());
       default:
