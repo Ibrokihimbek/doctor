@@ -45,7 +45,7 @@ class Specialist extends StatelessWidget {
           Text(
             name,
             style: MyTextStyle.sfProSemiBold
-                .copyWith(color: Colors.black, fontSize: 18.sp,fontWeight: FontWeight.w500),
+                .copyWith(color: Colors.black, fontSize: 16.sp,fontWeight: FontWeight.w600),
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 10.h),
