@@ -34,29 +34,36 @@ class DoctorCardItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap ?? () {},
       child: Container(
+        padding: EdgeInsets.all(12).r,
         margin:
             EdgeInsets.only(left: 20.w, right: 20.w, top: 12.h, bottom: 12.h),
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Theme.of(context).canvasColor,
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Color(0xff121212).withOpacity(0.12),
+              blurRadius: 8
+            )
+          ],
           borderRadius: BorderRadius.circular(12.r),
-          border: Border.all(
-            color: Theme.of(context).primaryColor.withOpacity(0.1),
-            width: 1,
-          ),
+
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            ClipRRect(
-              borderRadius:
-                  const BorderRadius.horizontal(left: Radius.circular(12)),
-              child: Image.network(
-                image,
-                height: 100.h,
-                width: 100.w,
-                fit: BoxFit.cover,
+            Container(
+              decoration: BoxDecoration(shape: BoxShape.circle,color: Color(0xff7DE5ED)),
+              child: ClipRRect(
+                borderRadius:
+                    const BorderRadius.horizontal(left: Radius.circular(150)),
+                child: Image.network(
+                  image,
+                  height: 80.h,
+                  width: 80.w,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             SizedBox(width: 20.w),
@@ -66,7 +73,7 @@ class DoctorCardItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "DR.$doctorName",
+                    "Dr.$doctorName",
                     maxLines: 2,
                     style: MyTextStyle.sfProSemiBold.copyWith(
                       fontSize: 16.sp,

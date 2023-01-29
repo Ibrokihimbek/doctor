@@ -36,7 +36,7 @@ class ProblemTextField extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(width: 20),
-            Text(tr('patient_details_screen.$text'),
+            Text(tr('$text'),
                 style: MyTextStyle.sfProSemiBold.copyWith(
                     color: MyColors.neutral1.withOpacity(0.8),
                     fontSize: 16.sp)),
@@ -65,7 +65,7 @@ class ProblemTextField extends StatelessWidget {
             validator: validator,
             controller: controller,
             decoration: InputDecoration(
-              hintText: tr('patient_details_screen.$text'),
+              hintText: tr('$text'),
               contentPadding: const EdgeInsets.only(left: 20, top: 40).r,
               hintStyle: MyTextStyle.sfProSemiBold
                   .copyWith(color: MyColors.neutral7, fontSize: 16.sp),

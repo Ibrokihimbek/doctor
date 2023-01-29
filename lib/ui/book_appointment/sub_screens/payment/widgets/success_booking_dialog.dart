@@ -30,14 +30,14 @@ void SuccessDialog(
                   height: 20.h,
                 ),
                 Text(
-                  tr('patient_details_screen.successfull',),
+                  'Successfull',
                   style: MyTextStyle.sfProSemiBold
                       .copyWith(color: MyColors.primary, fontSize: 29.sp),
                 ),
                 SizedBox(
                   height: 8.h,
                 ),
-                Text(tr(desc)),
+                Text(desc,textAlign: TextAlign.center,),
                 SizedBox(
                   height: 24.h,
                 ),

@@ -12,6 +12,7 @@ environment:
 
 
 dependencies:
+  expandable_page_view: ^1.0.17
   adaptive_theme: ^3.1.1
   sqflite: ^2.2.3
   cached_network_image: ^3.2.2

@@ -52,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                       color: Colors.grey[100]),
                   child: Row(
                     children: [
-                      Text("qidirish"),
+                    const  Text("search",style: TextStyle(color: Colors.grey),),
                       const Spacer(),
                       Icon(
                         Icons.search,
@@ -69,7 +69,7 @@ class HomeScreen extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                    'Kategoriyalar',
+                    'All categories',
                     style: MyTextStyle.sfProSemiBold
                         .copyWith(fontSize: 20.sp, fontWeight: FontWeight.w500),
                   ),
