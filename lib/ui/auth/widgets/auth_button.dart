@@ -30,7 +30,7 @@ class AuthButton extends StatelessWidget {
           // ignore: unnecessary_type_check
           if (state is ValidatingStatusState) {
             if (state.passwordValidated && state.emailValidated) {
-              if (title == "Ro'yxatdan o'tish  ") {
+              if (title == "Sign up") {
                 String? token = await FirebaseMessaging.instance.getToken();
                 // ignore: use_build_context_synchronously
                 context.read<AuthBloc>().add(CreateUserEvent(

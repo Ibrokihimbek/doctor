@@ -34,9 +34,7 @@ class AppointmentItemView extends StatelessWidget {
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: Color(0xff121212).withOpacity(0.12),
-                blurRadius: 12
-              )
+                  color: Color(0xff121212).withOpacity(0.12), blurRadius: 12)
             ],
             borderRadius: BorderRadius.circular(12.r),
             color: MyColors.neutralWhite,
@@ -68,7 +66,7 @@ class AppointmentItemView extends StatelessWidget {
                           child: Row(
                             children: [
                               Text(
-                                tr("history_screen.${model.type}"),
+                                model.type,
                                 style: MyTextStyle.sfProRegular.copyWith(
                                     color: MyColors.neutralBlack,
                                     fontSize: 12.sp),

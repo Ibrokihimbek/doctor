@@ -34,7 +34,7 @@ class _SignInOrSignUpScreenState extends State<SignInOrSignUpScreen> {
             Padding(
               padding: const EdgeInsets.only(top: 90, left: 24, right: 24).r,
               child: Text(
-                "Xush Kelibsiz",
+                "Welcome to Shifo top!",
                 style: TextStyle(
                     fontSize: 26.sp,
                     fontWeight: FontWeight.w500,
@@ -67,7 +67,7 @@ class _SignInOrSignUpScreenState extends State<SignInOrSignUpScreen> {
                     ),
                     child: Center(
                         child: Text(
-                      "Ro'yxatdan o'tish",
+                      "Sign Up",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 18.sp,
@@ -78,7 +78,7 @@ class _SignInOrSignUpScreenState extends State<SignInOrSignUpScreen> {
             Padding(
               padding: const EdgeInsets.only(top: 16, right: 15, left: 15).r,
               child: GlobalButtonOutline(
-                buttonText: 'Kirish',
+                buttonText: 'Sign In',
                 onTap: () {
                   Navigator.pushNamedAndRemoveUntil(
                       context, loginPage, (route) => false);

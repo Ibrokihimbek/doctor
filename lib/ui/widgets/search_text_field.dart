@@ -34,7 +34,7 @@ class SearchTextField extends StatelessWidget {
           hintStyle: MyTextStyle.sfProMedium.copyWith(
             fontSize: 14.sp,
             fontWeight: FontWeight.w400,
-            color: MyColors.black.withOpacity(0.8),
+            color: MyColors.black.withOpacity(0.5),
           ),
           suffixIcon: SvgPicture.asset(
             ActionIcons.search,

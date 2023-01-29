@@ -56,16 +56,16 @@ class CustomTextField extends StatelessWidget {
                       Expanded(
                         child: TextField(
                           onChanged: (value) {
-                            if(hintText=="Elektron pochta"){
+                            if(hintText=="Email"){
                               context.read<ValidateBloc>().add(ValidatingEmailEvent(email:value));
-                            }else if(hintText=="Parol"){
+                            }else if(hintText=="Password"){
                               context.read<ValidateBloc>().add(ValidatingPasswordEvent(password:value));
                             }
                           },
                           onSubmitted: (value){
-                            if(hintText=="Elektron pochta"){
+                            if(hintText=="Email"){
                               context.read<ValidateBloc>().add(ValidatingEmailEvent(email:value));
-                            }else if(hintText=="Parol"){
+                            }else if(hintText=="Password"){
                               context.read<ValidateBloc>().add(ValidatingPasswordEvent(password:value));
                             }
                           },
@@ -74,8 +74,8 @@ class CustomTextField extends StatelessWidget {
                           InputDecoration(hintText: hintText, border: InputBorder.none),
                         ),
                       ),
-                      hintText=="Elektron pochta"?state.emailValidated?Icon(Icons.verified,color: Colors.green,):Icon(Icons.cancel_outlined,color: Colors.red,):
-                      hintText=="Parol"?state.passwordValidated?Icon(Icons.verified,color: Colors.green,):Icon(Icons.cancel_outlined,color: Colors.red,):
+                      hintText=="Email"?state.emailValidated?Icon(Icons.verified,color: Colors.green,):Icon(Icons.cancel_outlined,color: Colors.red,):
+                      hintText=="Password"?state.passwordValidated?Icon(Icons.verified,color: Colors.green,):Icon(Icons.cancel_outlined,color: Colors.red,):
                       Icon(Icons.add,color: Colors.transparent,),
                       const SizedBox(width: 16,),
                     ],
