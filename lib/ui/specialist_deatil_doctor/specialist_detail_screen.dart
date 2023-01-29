@@ -33,7 +33,8 @@ class SpecialistDetailScreen extends StatelessWidget {
             if(state is LoadInProgress){
               return const Center(child: CircularProgressIndicator(),);
             }else if(state is LoadInSuccess){
-              return  Column(
+              return
+                Column(
                 children: [
                   ...List.generate(state.doctors.length, (index) {
                     var item = state.doctors[index];

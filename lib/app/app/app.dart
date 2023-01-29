@@ -11,8 +11,10 @@ import 'package:doctor_app/cubits/speciality/speciality_cubit.dart';
 import 'package:doctor_app/cubits/tab/tab_cubit.dart';
 import 'package:doctor_app/data/repositories/appointment_repository.dart';
 import 'package:doctor_app/data/repositories/auth_repository.dart';
+import 'package:doctor_app/data/repositories/open_data_repository.dart';
 import 'package:doctor_app/data/repositories/search_doctors_repository.dart';
 import 'package:doctor_app/data/repositories/user_repository.dart';
+import 'package:doctor_app/data/service/api_service/info_api_service.dart';
 import 'package:doctor_app/ui/auth/bloc/validate_bloc.dart';
 import 'package:doctor_app/data/repositories/doctors_repository.dart';
 import 'package:doctor_app/data/repositories/speciality_repository.dart';
@@ -20,6 +22,7 @@ import 'package:doctor_app/ui/doctors_search/cubit/doctors_search_cubit.dart';
 import 'package:doctor_app/data/repositories/review_repository.dart';
 import 'package:doctor_app/ui/add_review/bloc/add_review_bloc.dart';
 import 'package:doctor_app/ui/router.dart';
+import 'package:doctor_app/ui/tab_box/history/cubit/open_data_cubit.dart';
 import 'package:doctor_app/ui/tab_box/profile/sub_screens/appearance/bloc/theme_cubit.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -40,6 +43,8 @@ class App extends StatelessWidget {
             create: (context) =>
                 UserRepository(firebaseFirestore: FirebaseFirestore.instance),
           ),
+          RepositoryProvider(
+              create: (context) => OpenDataRepo(apiService: ApiService())),
           RepositoryProvider(
             create: (context) => AppointmentsRepository(
                 firebaseFirestore: FirebaseFirestore.instance),
@@ -66,6 +71,9 @@ class App extends StatelessWidget {
         ],
         child: MultiBlocProvider(
           providers: [
+            BlocProvider(
+                create: (context) =>
+                    OpenDataCubit(openDataRepo: context.read<OpenDataRepo>())),
             BlocProvider(
                 create: (context) => GetAppointmentsCubit(
                       context.read<AppointmentsRepository>(),
@@ -126,16 +134,15 @@ class MyApp extends StatelessWidget {
       designSize: const Size(428, 926),
       minTextAdapt: true,
       splitScreenMode: true,
-        builder: (light, dark) => MaterialApp(
-          localizationsDelegates: context.localizationDelegates,
-          supportedLocales: context.supportedLocales,
-          locale: context.locale,
-          title: 'Doctor Uz',
-          debugShowCheckedModeBanner: false,
-          initialRoute: splashPage,
-          onGenerateRoute: MyRouter.generateRoute,
-        ),
-
+      builder: (light, dark) => MaterialApp(
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
+        title: 'Doctor Uz',
+        debugShowCheckedModeBanner: false,
+        initialRoute: splashPage,
+        onGenerateRoute: MyRouter.generateRoute,
+      ),
     );
   }
 }
