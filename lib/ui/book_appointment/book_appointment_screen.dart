@@ -40,16 +40,16 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
       CommunicationIcons.call,
     ];
     List<String> infoNames = [
-      "messaging",
-      "voice_call",
+      "Messaging",
+      "Voice call",
     ];
     List<String> infoDescriptions = [
-      "can_messaging_with_doctor",
-      "can_make_a_voice_call_with_doctor",
+      "",
+      "",
     ];
     List<String> infoPrice = [
-      " 5",
-      "10",
+      "",
+      "",
     ];
     List<String> morningName = [
       "morning",
@@ -60,7 +60,7 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
     return Scaffold(
       backgroundColor: MyColors.white,
       appBar: CustomAppBar(
-        title: tr("global.book_appointment"),
+        title: 'Book Appointment',
         widget: const SizedBox(),
       ),
       body: SafeArea(
@@ -110,7 +110,7 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
                           }),
                     ),
                     SizedBox(height: 30.h),
-                    textItem("choose_the_hour"),
+                    textItem("Choose the hour"),
                     Wrap(
                       direction: Axis.horizontal,
                       children: List.generate(
@@ -160,7 +160,7 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
                       ),
                     ),
                     SizedBox(height: 15.h),
-                    textItem("free_information"),
+                    textItem("Free information"),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.28,
                       child: ListView.builder(
@@ -266,7 +266,7 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
         Container(
           margin: const EdgeInsets.only(top: 10, left: 5, bottom: 15).r,
           child: Text(
-            tr('book_appointment_screen.$text'),
+            tr('$text'),
             style: MyTextStyle.sfProSemiBold.copyWith(
               color: MyColors.black,
             ),

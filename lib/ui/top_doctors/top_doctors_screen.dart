@@ -25,8 +25,9 @@ class TopDoctorsScreen extends StatelessWidget {
       create: (context) => DoctorsSearchCubit(DoctorSearchRepository(
           firebaseFirestore: FirebaseFirestore.instance)),
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: CustomAppBar(
-          title:  tr('home_screen.top_doctor'),
+          title:  'Top Shifokorlar',
           widget: Container(
             height: 44.h,
             width: 44.w,
@@ -40,60 +41,56 @@ class TopDoctorsScreen extends StatelessWidget {
             ),
           ),
         ),
-        body: Container(
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
-        //  color: MyColors.white,
-          child: BlocConsumer<DoctorsSearchCubit, DoctorsSearchState>(
-            listenWhen: (previous, current) =>
-                current is LoadDoctorsSearchProgress,
-            builder: (context, state) {
-              if (state is DoctorsSearchInitial) {
-                return const Text("Hali data yo'q");
-              } else if (state is LoadDoctorsSearchProgress) {
-                return const Center(
-                  child: CircularProgressIndicator(),
-                );
-              } else if (state is LoadDoctorsSearchSuccess) {
-                List<DoctorModel> doctors = state.doctors;
-        
-                return SingleChildScrollView(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const CategoryItem(),
-                      ListView.builder(
-                        shrinkWrap: true,
-                        itemCount: doctors.length,
-                        itemBuilder: (context, index) {
-                          return DoctorCardItem(
-                              onTap: () {
-                                Navigator.pushNamed(context, doctorDetailRoute,
-                                    arguments: state.doctors[index]);
-                              },
-                              image: doctors[index].doctorImage,
-                              doctorName: doctors[index].doctorName,
-                              rating: doctors[index].rating.toDouble(),
-                              reviewsCount: doctors[index].patientCount,
-                              cardioSpecialist: doctors[index].specialityName,
-                              isOutlined: true);
-                        },
-                      ),
-                    ],
-                  ),
-                );
-              } else {
-                return const SizedBox();
-              }
-            },
-            listener: (context, state) {
-              if (state is LoadDoctorInProgress) {
-                MyUtils.getMyToast(message: "Loading in progress...");
-              } else if (state is LoadDoctorInSuccess) {
-                MyUtils.getMyToast(message: "Success data");
-              }
-            },
-          ),
+        body: BlocConsumer<DoctorsSearchCubit, DoctorsSearchState>(
+          listenWhen: (previous, current) =>
+              current is LoadDoctorsSearchProgress,
+          builder: (context, state) {
+            if (state is DoctorsSearchInitial) {
+              return const Text("Hali data yo'q");
+            } else if (state is LoadDoctorsSearchProgress) {
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            } else if (state is LoadDoctorsSearchSuccess) {
+              List<DoctorModel> doctors = state.doctors;
+
+              return SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const CategoryItem(),
+                    ListView.builder(
+                      physics: NeverScrollableScrollPhysics(),
+                      // shrinkWrap: true,
+                      itemCount: doctors.length,
+                      itemBuilder: (context, index) {
+                        return DoctorCardItem(
+                            onTap: () {
+                              Navigator.pushNamed(context, doctorDetailRoute,
+                                  arguments: state.doctors[index]);
+                            },
+                            image: doctors[index].doctorImage,
+                            doctorName: doctors[index].doctorName,
+                            rating: doctors[index].rating.toDouble(),
+                            reviewsCount: doctors[index].patientCount,
+                            cardioSpecialist: doctors[index].specialityName,
+                            isOutlined: true);
+                      },
+                    ),
+                  ],
+                ),
+              );
+            } else {
+              return const SizedBox();
+            }
+          },
+          listener: (context, state) {
+            if (state is LoadDoctorInProgress) {
+              MyUtils.getMyToast(message: "Loading in progress...");
+            } else if (state is LoadDoctorInSuccess) {
+              MyUtils.getMyToast(message: "Success data");
+            }
+          },
         ),
       ),
     );

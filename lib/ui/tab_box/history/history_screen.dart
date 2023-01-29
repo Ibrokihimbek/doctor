@@ -190,6 +190,8 @@
 // }
 import 'package:doctor_app/ui/tab_box/history/cubit/open_data_cubit.dart';
 import 'package:doctor_app/ui/tab_box/history/cubit/open_data_state.dart';
+import 'package:doctor_app/ui/tab_box/home/widgets/home_appbar.dart';
+import 'package:doctor_app/utils/icons/file/file.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -200,8 +202,13 @@ class OpenDataScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Open data api'),
+      backgroundColor: Colors.white,
+      appBar: HomeAppbar(
+        logo: FileIcons.logo,
+        title: "Open Data Ma'lumotlari",
+        onNotificationTap: () {
+          // Navigator.pushNamed(context, notificationRoute);
+        },
       ),
       body: BlocBuilder<OpenDataCubit,OpenDataCubitState>(builder: (context,state){
 
@@ -215,29 +222,6 @@ class OpenDataScreen extends StatelessWidget {
               children: [
                 ...List.generate(state.infoOpenData.result!.data!.length, (index) {
                   var item = state.infoOpenData.result!.data![index];
-                  List years = [
-                    item.i2000Yil,
-                    item.i2001Yil,
-                    item.i2002Yil,
-                    item.i2003Yil,
-                    item.i2004Yil,
-                    item.i2005Yil,
-                    item.i2006Yil,
-                    item.i2007Yil,
-                    item.i2008Yil,
-                    item.i2009Yil,
-                    item.i2010Yil,
-                    item.i2011Yil,
-                    item.i2012Yil,
-                    item.i2013Yil,
-                    item.i2014Yil,
-                    item.i2015Yil,
-                    item.i2016Yil,
-                    item.i2017Yil,
-                    item.i2018Yil,
-                    item.i2019Yil,
-                    item.i2020Yil,
-                  ];
 
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -248,23 +232,22 @@ class OpenDataScreen extends StatelessWidget {
                           color:  Colors.white,
                           boxShadow: [
                             BoxShadow(
-                              color: Color(0xff121212).withOpacity(0.07),
-                              blurRadius: 16,
+                              color: Color(0xff121212).withOpacity(0.12),
+                              blurRadius: 6,
                             )
                           ],
                           borderRadius: BorderRadius.circular(16.r)
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.only(right: 78.0,top: 8.0).r,
-                        child: Column(
-                          children: [
-                            SizedBox(height: 10.h,),
-                            Text( item.hududlar.toString(),style: TextStyle(color: Color(0xff121212),fontSize: 22.sp,fontWeight: FontWeight.w600,),),
-                            SizedBox(height: 10.h,),
-                            Text( years[index].toString(),style: TextStyle(color: Color(0xff121212).withOpacity(0.4),fontSize: 16.sp,fontWeight: FontWeight.w400,),),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(height: 10.h,),
+                          Center(child: Text( item.hududlar.toString(),style: TextStyle(color: Color(0xff121212),fontSize: 22.sp,fontWeight: FontWeight.w600,),)),
+                          SizedBox(height: 10.h,),
+                          Text( item.i2020Yil.toString(),style: TextStyle(color: Color(0xff121212).withOpacity(0.4),fontSize: 16.sp,fontWeight: FontWeight.w400,),),
 
-                          ],
-                        ),
+                        ],
                       ),
                     ),
                   );

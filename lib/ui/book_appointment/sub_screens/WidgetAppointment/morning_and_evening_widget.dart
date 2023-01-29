@@ -28,10 +28,12 @@ class MorningAndEvening extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.05,
       width: MediaQuery.of(context).size.width * 0.42,
       decoration: BoxDecoration(
-          border: Border.all(
-            width: 2,
-            color: MyColors.actionPrimaryDefault,
-          ),
+          boxShadow: [
+            BoxShadow(
+              color: Color(0xff121212).withOpacity(0.1),
+              blurRadius: 6
+            )
+          ],
           borderRadius: BorderRadius.circular(20).w,
           color: containerColor),
       child: Row(

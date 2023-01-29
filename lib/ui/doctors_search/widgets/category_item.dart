@@ -28,7 +28,7 @@ class _CategoryItemState extends State<CategoryItem> {
         if (state is SpecialitySuccess) {
           List titles = state.specialistModel.map((e) => e.id).toList();
           List titlesName = state.specialistModel.map((e) => e.title).toList();
-          titles.insert(0, "Barchasi");
+          titlesName.insert(0, "Barchasi");
           return SizedBox(
             height: 36.h,
             child: ListView.separated(
@@ -45,7 +45,7 @@ class _CategoryItemState extends State<CategoryItem> {
                   onTap: () {
                     currentTab = titles[index];
 
-                    if (titles[index] == "Barchasi") {
+                    if (titlesName[index] == "Barchasi") {
                       context.read<DoctorsSearchCubit>().fetchDoctorsInfo();
                     } else {
                       context

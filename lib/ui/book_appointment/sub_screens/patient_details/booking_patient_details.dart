@@ -67,7 +67,7 @@ class _BookingPatientDetailsState extends State<BookingPatientDetails> {
     ];
     return Scaffold(
       appBar: CustomAppBar(
-        title: "patient_details".tr(),
+        title: "Patient details",
         widget: const SizedBox(),
       ),
       body: SingleChildScrollView(
@@ -89,7 +89,7 @@ class _BookingPatientDetailsState extends State<BookingPatientDetails> {
                         Padding(
                           padding: const EdgeInsets.only(right: 14, left: 14).r,
                           child: MyTextField(
-                            text: "full_name",
+                            text: "Full name",
                             onChanged: ((val) {}),
                             controller: _fullNameController,
                             validator: ((val) {
@@ -107,7 +107,7 @@ class _BookingPatientDetailsState extends State<BookingPatientDetails> {
                         SizedBox(
                           height: 30.h,
                         ),
-                        fieldsName("select_your_age_range"),
+                        fieldsName("Select your age range"),
                         SizedBox(
                           height: 60.h,
                           width: MediaQuery.of(context).size.width,
@@ -157,7 +157,7 @@ class _BookingPatientDetailsState extends State<BookingPatientDetails> {
                         Padding(
                           padding: const EdgeInsets.only(right: 14, left: 14),
                           child: ProblemTextField(
-                            text: "write_your_problem",
+                            text: "Write your problem",
                             onChanged: ((val) {}),
                             controller: _problemController,
                             validator: ((val) {
@@ -205,9 +205,7 @@ class _BookingPatientDetailsState extends State<BookingPatientDetails> {
                     SuccessDialog(
                         context: context,
                         imagePath: AppIcons.message,
-                        desc: "Your appointment booking successfully  \n    "
-                            "   completed. Dr. Jenny Wilson will    \n               "
-                            "       Message you soon.");
+                        desc: "Your appointment booking successfully completed. Dr. Jenny Wilson will Message you soon.");
                   }),
                   isSmall: false,
                 ),
@@ -273,7 +271,7 @@ class _BookingPatientDetailsState extends State<BookingPatientDetails> {
           width: 28.w,
         ),
         Text(
-          tr('patient_details_screen.$text'),
+          tr('$text'),
           style: MyTextStyle.sfProSemiBold.copyWith(
               color: MyColors.neutral1.withOpacity(0.8), fontSize: 16.sp),
         ),
