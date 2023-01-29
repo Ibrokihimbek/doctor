@@ -139,7 +139,7 @@ class MyRouter {
 
         return MaterialPageRoute(
             builder: (_) => AddReviewScreen(
-                  model: args['info'],
+                  model: args['infoModel'],
                 ));
 
       case helpRoute:

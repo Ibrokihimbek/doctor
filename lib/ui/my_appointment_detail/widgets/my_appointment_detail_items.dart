@@ -109,23 +109,6 @@ class MyAppointmentsDetails extends StatelessWidget {
             color: MyColors.neutral8,
           ),
         ),
-        Text(
-          tr("my_appointments_detail_screen.free_information"),
-          style: MyTextStyle.sfProSemiBold.copyWith(
-            fontSize: 18.sp,
-            color: MyColors.neutral1,
-          ),
-        ),
-        SizedBox(
-          height: 8.h,
-        ),
-        Text(
-          "\$ (Paid)",
-          style: MyTextStyle.sfProSemiBold.copyWith(
-            fontSize: 16.sp,
-            color: MyColors.primary,
-          ),
-        ),
         SizedBox(
           height: 20.h,
         ),
@@ -148,8 +131,10 @@ class MyAppointmentsDetails extends StatelessWidget {
                 model.type == "Messaging"
                     ? "Message Now (Start at ${model.hour})"
                     : "Voice Call Now (Start at ${model.hour})",
-                style: MyTextStyle.sfProSemiBold
-                    .copyWith(color: MyColors.white, fontSize: 16.sp,fontWeight: FontWeight.w500),
+                style: MyTextStyle.sfProSemiBold.copyWith(
+                    color: MyColors.white,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w500),
               ),
             ),
           ),
