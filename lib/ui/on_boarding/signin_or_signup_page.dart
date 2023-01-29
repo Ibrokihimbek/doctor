@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../utils/color.dart';
 import '../../utils/constants.dart';
 import '../../utils/icons/app_icons.dart';
-import '../widgets/global_button.dart';
 import '../widgets/global_button_outline.dart';
 
 class SignInOrSignUpScreen extends StatefulWidget {
@@ -28,7 +27,7 @@ class _SignInOrSignUpScreenState extends State<SignInOrSignUpScreen> {
               padding: const EdgeInsets.only(top: 130, left: 40, right: 40).r,
               child: SizedBox(
                 height: myHeight(context) * 0.4,
-                width: myWidth(context) * 0.852,
+                width: myWidth(context) * 0.4,
                 child: Image.asset(AppIcons.logoWithBackground),
               ),
             ),
@@ -36,7 +35,10 @@ class _SignInOrSignUpScreenState extends State<SignInOrSignUpScreen> {
               padding: const EdgeInsets.only(top: 90, left: 24, right: 24).r,
               child: Text(
                 "Xush Kelibsiz",
-                style: TextStyle(fontSize: 26.sp, fontWeight: FontWeight.w500,fontStyle: FontStyle.normal),
+                style: TextStyle(
+                    fontSize: 26.sp,
+                    fontWeight: FontWeight.w500,
+                    fontStyle: FontStyle.normal),
               ),
             ),
             Padding(
@@ -57,12 +59,11 @@ class _SignInOrSignUpScreenState extends State<SignInOrSignUpScreen> {
                         begin: Alignment.topRight,
                         end: Alignment.bottomLeft,
                         colors: [
-                          Color(0xFF2972FE),
+                          Color(0xFF0000ff),
                           Color(0xFF0372FE),
-                          // Color(0xFF6499FF),
                         ],
                       ),
-                      borderRadius: BorderRadius.circular(12).r,
+                      borderRadius: BorderRadius.circular(30).r,
                     ),
                     child: Center(
                         child: Text(
@@ -77,7 +78,6 @@ class _SignInOrSignUpScreenState extends State<SignInOrSignUpScreen> {
             Padding(
               padding: const EdgeInsets.only(top: 16, right: 15, left: 15).r,
               child: GlobalButtonOutline(
-
                 buttonText: 'Kirish',
                 onTap: () {
                   Navigator.pushNamedAndRemoveUntil(

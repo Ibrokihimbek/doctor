@@ -149,7 +149,7 @@ class MyAppointmentsDetails extends StatelessWidget {
                     ? "Message Now (Start at ${model.hour})"
                     : "Voice Call Now (Start at ${model.hour})",
                 style: MyTextStyle.sfProSemiBold
-                    .copyWith(color: MyColors.white, fontSize: 18.sp),
+                    .copyWith(color: MyColors.white, fontSize: 16.sp,fontWeight: FontWeight.w500),
               ),
             ),
           ),
