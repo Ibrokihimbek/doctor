@@ -13,7 +13,7 @@ class CategoryItem extends StatefulWidget {
   State<CategoryItem> createState() => _CategoryItemState();
 }
 
-String currentTab = "All";
+String currentTab = "Barchasi";
 
 class _CategoryItemState extends State<CategoryItem> {
   @override
@@ -26,8 +26,9 @@ class _CategoryItemState extends State<CategoryItem> {
           );
         }
         if (state is SpecialitySuccess) {
-          List titles = state.specialistModel.map((e) => e.title).toList();
-          titles.insert(0, "All");
+          List titles = state.specialistModel.map((e) => e.id).toList();
+          List titlesName = state.specialistModel.map((e) => e.title).toList();
+          titles.insert(0, "Barchasi");
           return SizedBox(
             height: 36.h,
             child: ListView.separated(
@@ -44,7 +45,7 @@ class _CategoryItemState extends State<CategoryItem> {
                   onTap: () {
                     currentTab = titles[index];
 
-                    if (titles[index] == "All") {
+                    if (titles[index] == "Barchasi") {
                       context.read<DoctorsSearchCubit>().fetchDoctorsInfo();
                     } else {
                       context
@@ -66,7 +67,7 @@ class _CategoryItemState extends State<CategoryItem> {
                         padding: EdgeInsets.symmetric(
                             vertical: 6.h, horizontal: 16.w),
                         child: Text(
-                          titles[index],
+                          titlesName[index],
                           style: MyTextStyle.sfProLight.copyWith(
                               fontWeight: FontWeight.w600,
                               color: titles[index] == currentTab
